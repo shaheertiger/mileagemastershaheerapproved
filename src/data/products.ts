@@ -1,5 +1,5 @@
-import jugFront from '../assets/jug-front.png'
 import { getGrade, type GradeName } from './grades'
+import { JUG_FRONT, type ResponsiveImage } from './images'
 
 /**
  * The Mileage Master product catalogue.
@@ -75,7 +75,7 @@ export interface Product {
   grade: GradeName
   name: string
   blurb: string
-  image: string
+  image: ResponsiveImage
   imageAlt: string
 }
 
@@ -83,13 +83,14 @@ export interface Product {
  * Product photography.
  *
  * Only one jug shot was supplied with the brand assets (0W-20 Premium Full
- * Synthetic, 5 L). Drop per-grade, per-line shots into `src/assets` and add
- * them here — everything else picks the new image up automatically.
+ * Synthetic, 5 L). Add per-grade, per-line originals to `assets-source`, run
+ * `npm run images`, then register the generated set here — everything else
+ * picks the new image up automatically.
  */
-const PRODUCT_IMAGES: Partial<Record<string, string>> = {}
+const PRODUCT_IMAGES: Partial<Record<string, ResponsiveImage>> = {}
 
-function productImage(line: ProductLineId, grade: GradeName): string {
-  return PRODUCT_IMAGES[`${line}:${grade}`] ?? jugFront
+function productImage(line: ProductLineId, grade: GradeName): ResponsiveImage {
+  return PRODUCT_IMAGES[`${line}:${grade}`] ?? JUG_FRONT
 }
 
 /** The licence portion of a specification string, i.e. the part before the first separator. */

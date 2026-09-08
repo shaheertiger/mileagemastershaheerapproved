@@ -9,21 +9,15 @@ import { FinderStrip } from './sections/FinderStrip'
 import { GradeSelector } from './sections/GradeSelector'
 import { Hero } from './sections/Hero'
 import { MadeInEurope } from './sections/MadeInEurope'
-import { MobileShowcase } from './sections/MobileShowcase'
 import { Testimonials } from './sections/Testimonials'
 
 export interface HomePageProps {
   /** Section toggles carried over from the design's component props. */
   showTestimonials?: boolean
   showOrderBar?: boolean
-  showMobileShowcase?: boolean
 }
 
-export function HomePage({
-  showTestimonials = true,
-  showOrderBar = true,
-  showMobileShowcase = true,
-}: HomePageProps) {
+export function HomePage({ showTestimonials = true, showOrderBar = true }: HomePageProps) {
   return (
     <QuotePrefillProvider>
       <UtilityBar />
@@ -41,7 +35,6 @@ export function HomePage({
           lead="Territory pricing, pallet programs and counter display kits for shops, jobbers and installers across Ontario."
         />
         {showOrderBar && <ContactBar headline="Order today" />}
-        {showMobileShowcase && <MobileShowcase />}
       </main>
       <SiteFooter page="home" />
     </QuotePrefillProvider>

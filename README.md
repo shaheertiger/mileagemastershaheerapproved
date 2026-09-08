@@ -5,7 +5,7 @@ OEM Fleets (Mississauga, ON):
 
 | Page | Route | What it does |
 | --- | --- | --- |
-| Homepage | `/` | Hero, working oil finder, grade selector, Made in Europe, approvals, testimonials, dealer/quote form, order bar, mobile mockups |
+| Homepage | `/` | Hero, working oil finder, grade selector, Made in Europe, approvals, testimonials, dealer/quote form, order bar |
 | Oil finder | `/oil-finder/` | Year → Make → Model → Engine lookup returning grade, oil capacity, specification, drain interval and the matching Mileage Master products |
 
 Built from the design handoff in [`docs/design-handoff/`](docs/design-handoff/), which stays in the
@@ -25,18 +25,26 @@ npm run dev        # http://localhost:5173
 npm run build      # typecheck + production build into dist/
 npm run preview    # serve dist/ locally
 npm run check:data # validate the vehicle application database
+npm run images     # regenerate responsive WebP from assets-source/
+npm run fonts      # re-download the self-hosted webfonts
 ```
 
 ## What's where
 
 ```
-index.html                  homepage entry
+index.html                  homepage entry (meta, preloads, structured data)
 oil-finder/index.html       oil finder entry
+assets-source/              full-resolution originals — never served
+public/
+  img/                      generated WebP the site actually ships
+  fonts/                    self-hosted woff2
+  favicon.svg  robots.txt  sitemap.xml  _headers
 src/
   data/
     site.ts                 phone, email, address, nav and footer links
     grades.ts               the seven viscosity grades and their licences
     products.ts             the three product lines, SKUs, packs and images
+    images.ts               responsive image sets (src + srcset)
     vehicles.ts             vehicle application database  ← main data dependency
   lib/
     lookup.ts               query layer over the vehicle database
@@ -48,8 +56,9 @@ src/
   pages/home/               homepage and its sections
   pages/finder/             oil finder and its sections
   styles/tokens.css         every colour, font and spacing value in the design
+  styles/fonts.css          generated @font-face rules — do not edit by hand
 docs/design-handoff/        the original design brief and prototypes
-scripts/check-data.ts       vehicle data validator
+scripts/                    data validator, image pipeline, font fetcher
 ```
 
 ### Common edits
@@ -59,6 +68,9 @@ scripts/check-data.ts       vehicle data validator
 - **A grade's copy or licences** — `src/data/grades.ts`.
 - **Product lines, pack sizes, SKUs** — `src/data/products.ts`.
 - **Vehicles** — `src/data/vehicles.ts`, then run `npm run check:data`.
+- **Product photography** — drop the original in `assets-source/`, add it to the job list in
+  `scripts/optimize-images.mjs`, run `npm run images`, then register the set in `src/data/images.ts`
+  and `PRODUCT_IMAGES` in `src/data/products.ts`.
 
 ### Adding a vehicle
 
@@ -79,6 +91,22 @@ scripts/check-data.ts       vehicle data validator
 `from`/`to` are inclusive model years — that's what makes the YEAR select filter the makes, models
 and engines below it. `drain` is optional and defaults to the grade's own guidance; set it only
 when the OEM differs (VW's 15,000 km intervals, for example).
+
+## Performance
+
+The homepage transfers about **220 kB** on a first visit, and roughly 60 kB on a repeat visit once
+fonts and photography are cached.
+
+- **Photography ships as responsive WebP.** The hero jug is 43 kB at desktop sizes and 25 kB on a
+  phone, down from a 1.2 MB PNG. Originals stay in `assets-source/`; `npm run images` regenerates
+  the derivatives.
+- **Fonts are self-hosted**, Latin and Latin Extended subsets only. No third-party connection, no
+  render-blocking stylesheet. Archivo is a variable font, so one file covers every weight.
+- **The hero image and the two critical fonts are preloaded** from the HTML, so they start
+  downloading before React renders. Everything below the fold is `loading="lazy"`.
+- **Each page ships only its own code** — the finder does not download homepage sections.
+- **`public/_headers`** sets a one-year immutable cache on fingerprinted assets and fonts for
+  Netlify and Cloudflare Pages. On other hosts, mirror those rules in the server config.
 
 ## Making the quote form deliver
 
@@ -106,6 +134,10 @@ Serving from a sub-path (GitHub Pages project sites) needs the base at build tim
 VITE_BASE=/mileagemastershaheerapproved/ npm run build
 ```
 
+**The canonical URLs assume `https://mileagemaster.ca`.** If the site lands on a different domain,
+update the `canonical` and `og:url` tags in both HTML files plus `public/robots.txt` and
+`public/sitemap.xml` — search engines will otherwise be pointed at the wrong host.
+
 ## Before this goes live
 
 These are real gaps, not polish items:
@@ -117,15 +149,14 @@ These are real gaps, not polish items:
    MOTOR, or the blender's own application guide). Everything reads the data through
    `src/lib/lookup.ts`, so a lookup endpoint means reimplementing that one module.
 2. **One product photo is reused everywhere.** The supplied shot is the 0W-20 Premium Full Synthetic
-   5 L jug. Add per-grade, per-line photography to `src/assets` and register it in the
-   `PRODUCT_IMAGES` map in `src/data/products.ts`.
-3. **Fonts load from Google Fonts.** Self-host Anton, Archivo and Barlow Condensed for privacy and
-   for a site that survives a Google outage.
-4. **The testimonials are placeholder copy** carried over from the design brief. Swap them for real,
+   5 L jug. Per-grade, per-line photography is the single biggest visual upgrade left.
+3. **The testimonials are placeholder copy** carried over from the design brief. Swap them for real,
    attributable quotes or delete the section (`showTestimonials={false}` on `HomePage`).
-5. **The spec sheet carries no typical-properties data** (viscosity index, flash point, pour point).
+4. **The spec sheet carries no typical-properties data** (viscosity index, flash point, pour point).
    Those come from the blender's certificate of analysis; the sheet currently says they're available
    on request.
+5. **Images are WebP with no fallback.** Every browser released since 2020 supports it; visitors on
+   something older will see empty image slots.
 6. **No analytics or cookie consent** is installed.
 
 ## Notes on the build
@@ -145,4 +176,6 @@ Deliberate departures from the design prototypes, all of them things the handoff
   states.
 - "Spec sheet" opens a **printable data sheet** rather than linking to a PDF that doesn't exist yet.
 - Unicode glyphs (✆ ✉ ✓ ★ ▾) are replaced with drawn SVG icons in `src/components/Icon.tsx`.
+- The **phone mockup section was dropped** — it showed the client what the site would look like on a
+  phone, which the live site does not need to explain to its own visitors.
 - The footer's "Mockup — content for layout review" line is gone.

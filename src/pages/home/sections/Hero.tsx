@@ -1,6 +1,6 @@
-import jugFront from '../../../assets/jug-front.png'
 import { Button } from '../../../components/Button'
 import { Icon } from '../../../components/Icon'
+import { JUG_FRONT } from '../../../data/images'
 import styles from './Hero.module.css'
 
 const TRUST = [
@@ -57,10 +57,15 @@ export function Hero() {
           <div className={styles.glow} aria-hidden="true" />
           <img
             className={styles.jug}
-            src={jugFront}
+            src={JUG_FRONT.src}
+            srcSet={JUG_FRONT.srcSet}
+            sizes="(max-width: 860px) 92vw, 430px"
             alt="Mileage Master 0W-20 Premium Full Synthetic 5 L jug"
-            width={1023}
-            height={1600}
+            width={JUG_FRONT.width}
+            height={JUG_FRONT.height}
+            // The hero jug is the page's LCP element; it is preloaded in the HTML.
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
       </div>

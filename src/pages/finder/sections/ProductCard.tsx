@@ -18,11 +18,14 @@ export function ProductCard({ product, onSpecSheet }: ProductCardProps) {
       <div className={styles.plate}>
         <img
           className={styles.jug}
-          src={product.image}
+          src={product.image.src}
+          srcSet={product.image.srcSet}
+          sizes="(max-width: 640px) 60vw, 170px"
           alt={product.imageAlt}
-          width={1023}
-          height={1600}
+          width={product.image.width}
+          height={product.image.height}
           loading="lazy"
+          decoding="async"
         />
       </div>
 

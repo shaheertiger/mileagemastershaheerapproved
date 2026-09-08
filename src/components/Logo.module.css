@@ -76,20 +76,3 @@
 .sm .registered {
   font-size: 7px;
 }
-
-/* xs — phone mockups */
-.xs {
-  border-width: 2px;
-  padding: 5px 10px 4px;
-}
-.xs .top {
-  font-size: 15px;
-}
-.xs .bottom {
-  font-size: 9px;
-  letter-spacing: 0.3em;
-  padding-left: 0.3em;
-}
-.xs .registered {
-  font-size: 6px;
-}

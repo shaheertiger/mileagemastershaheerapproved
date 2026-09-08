@@ -1,15 +1,13 @@
 import styles from './Logo.module.css'
 
 interface LogoProps {
-  size?: 'lg' | 'md' | 'sm' | 'xs'
+  size?: 'lg' | 'md' | 'sm'
   /** The header lockup sits on a drop shadow; the footer ones do not. */
   elevated?: boolean
-  /** The phone mockups drop the registered mark for legibility at 15px. */
-  showRegistered?: boolean
 }
 
-/** The Mileage Master wordmark lockup, reused at four sizes across the site. */
-export function Logo({ size = 'lg', elevated = false, showRegistered = true }: LogoProps) {
+/** The Mileage Master wordmark lockup, reused at three sizes across the site. */
+export function Logo({ size = 'lg', elevated = false }: LogoProps) {
   const className = [styles.logo, styles[size], elevated ? styles.elevated : '']
     .filter(Boolean)
     .join(' ')
@@ -23,7 +21,7 @@ export function Logo({ size = 'lg', elevated = false, showRegistered = true }: L
       </span>
       <span className={styles.bottom} aria-hidden="true">
         MASTER
-        {showRegistered && <span className={styles.registered}>®</span>}
+        <span className={styles.registered}>®</span>
       </span>
       <span className="mm-visually-hidden">Mileage Master</span>
     </span>

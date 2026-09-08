@@ -1,0 +1,19 @@
+# Cache policy for Netlify and Cloudflare Pages.
+# Other hosts: mirror these rules in the server config.
+
+# Vite fingerprints everything under /assets/, so it can be cached forever.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Font files are stable; rename them if a face is ever replaced.
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Product photography has stable names, so keep the window shorter.
+/img/*
+  Cache-Control: public, max-age=2592000
+
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

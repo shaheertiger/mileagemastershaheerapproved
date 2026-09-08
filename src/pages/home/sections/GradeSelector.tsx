@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import jugFront from '../../../assets/jug-front.png'
 import { Button } from '../../../components/Button'
 import { SpecSheet } from '../../../components/SpecSheet'
 import { GRADES, type GradeName } from '../../../data/grades'
+import { JUG_FRONT } from '../../../data/images'
 import { PRODUCT_LINES } from '../../../data/products'
 import { useQuotePrefill } from '../../../lib/quote'
 import styles from './GradeSelector.module.css'
@@ -60,10 +60,14 @@ export function GradeSelector({ defaultGrade = '0W-20' }: GradeSelectorProps) {
           <div className={styles.plate}>
             <img
               className={styles.jug}
-              src={jugFront}
+              src={JUG_FRONT.src}
+              srcSet={JUG_FRONT.srcSet}
+              sizes="(max-width: 720px) 80vw, 260px"
               alt={`Mileage Master ${productName} ${premium.packSize} jug`}
-              width={1023}
-              height={1600}
+              width={JUG_FRONT.width}
+              height={JUG_FRONT.height}
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

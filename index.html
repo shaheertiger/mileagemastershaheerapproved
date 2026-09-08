@@ -3,19 +3,69 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Mileage Master — Advanced Full Synthetic Engine Oil | Quality Priced Right</title>
     <meta
       name="description"
       content="European-blended full synthetic engine oil in every grade your bays run through — 0W-8 to 5W-40. API SP licensed, warranty approved, priced by the case. Distributed in Canada by OEM Fleets, Mississauga, ON."
     />
+    <link rel="canonical" href="https://mileagemaster.ca/" />
     <meta name="theme-color" content="#E31B23" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700&display=swap"
-      rel="stylesheet"
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mileage Master" />
+    <meta property="og:title" content="Mileage Master — Advanced Full Synthetic Engine Oil" />
+    <meta
+      property="og:description"
+      content="Full synthetic engine oil, 0W-8 to 5W-40. API SP licensed, warranty approved, priced by the case."
     />
+    <meta property="og:url" content="https://mileagemaster.ca/" />
+    <meta property="og:image" content="https://mileagemaster.ca/img/jug-front-860.webp" />
+    <meta property="og:locale" content="en_CA" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Self-hosted: no third-party connection, no render-blocking stylesheet. -->
+    <link rel="preload" href="/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- The hero jug is the LCP element; start it before React renders. -->
+    <link
+      rel="preload"
+      href="/img/jug-front-860.webp"
+      as="image"
+      type="image/webp"
+      imagesrcset="/img/jug-front-340.webp 340w, /img/jug-front-520.webp 520w, /img/jug-front-860.webp 860w"
+      imagesizes="(max-width: 860px) 92vw, 430px"
+      fetchpriority="high"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mileage Master",
+        "url": "https://mileagemaster.ca/",
+        "description": "Advanced full synthetic engine oil, blended in Europe and distributed in Canada by OEM Fleets.",
+        "telephone": "+1-905-602-6897",
+        "email": "orders@oemfleets.ca",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mississauga",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        },
+        "areaServed": "CA",
+        "makesOffer": {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Mileage Master Premium Full Synthetic Engine Oil",
+            "category": "Gasoline engine oil",
+            "brand": { "@type": "Brand", "name": "Mileage Master" }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

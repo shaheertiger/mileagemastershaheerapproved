@@ -1,4 +1,4 @@
-import jugBack from '../../../assets/jug-back.jpg'
+import { JUG_BACK } from '../../../data/images'
 import styles from './MadeInEurope.module.css'
 
 const POINTS = [
@@ -43,10 +43,14 @@ export function MadeInEurope() {
         <figure className={styles.figure}>
           <div className={styles.card}>
             <img
-              src={jugBack}
+              src={JUG_BACK.src}
+              srcSet={JUG_BACK.srcSet}
+              sizes="(max-width: 720px) 88vw, 374px"
               alt="Mileage Master 0W-20 back label showing features, benefits and approvals"
-              width={1009}
-              height={1600}
+              width={JUG_BACK.width}
+              height={JUG_BACK.height}
+              loading="lazy"
+              decoding="async"
             />
             <figcaption className={styles.caption}>
               FULL APPROVALS PRINTED ON EVERY LABEL
