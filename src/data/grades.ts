@@ -113,3 +113,11 @@ export const OEM_SPECIFICATIONS = [
   'Ford WSS-M2C947-A',
   'GM 6094M',
 ]
+
+/**
+ * The "Recommended for use with" block as it is printed on the pack.
+ *
+ * Set as real text rather than left to be read off the product photo: it stays
+ * legible at any size, gets indexed, and is read out by screen readers.
+ */
+export const LABEL_APPROVALS = [...INDUSTRY_LICENCES, ...OEM_SPECIFICATIONS]

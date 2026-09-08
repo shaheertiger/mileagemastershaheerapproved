@@ -1,3 +1,4 @@
+import { LABEL_APPROVALS } from '../../../data/grades'
 import { JUG_BACK } from '../../../data/images'
 import styles from './MadeInEurope.module.css'
 
@@ -53,7 +54,14 @@ export function MadeInEurope() {
               decoding="async"
             />
             <figcaption className={styles.caption}>
-              FULL APPROVALS PRINTED ON EVERY LABEL
+              <span className={styles.captionLabel}>Printed on every label</span>
+              {/* The approvals are set as text rather than left to be read off
+                  the photo, which is far too small to resolve them. */}
+              <ul className={styles.approvals}>
+                {LABEL_APPROVALS.map((approval) => (
+                  <li key={approval}>{approval}</li>
+                ))}
+              </ul>
             </figcaption>
           </div>
         </figure>

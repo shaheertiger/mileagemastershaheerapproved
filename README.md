@@ -148,8 +148,12 @@ These are real gaps, not polish items:
    are advised from it, replace `src/data/vehicles.ts` with a licensed feed (Mitchell, ALLDATA,
    MOTOR, or the blender's own application guide). Everything reads the data through
    `src/lib/lookup.ts`, so a lookup endpoint means reimplementing that one module.
-2. **One product photo is reused everywhere.** The supplied shot is the 0W-20 Premium Full Synthetic
-   5 L jug. Per-grade, per-line photography is the single biggest visual upgrade left.
+2. **The product imagery is a synthetic mockup, not photography.** Zoom into the back-label shot and
+   the print reads "Made le Europe", "Missiosauga" and "Mileage Masterinc.", and the API donut says
+   SAE 0W-30 on a 0W20 pack — the character-level garbling of a generated image. It is fine at the
+   size it is displayed, but it will not survive a zoom, a retina display or a print piece. Replace
+   it with real photography of the actual product, or with the label print artwork. The same shot is
+   also reused for every grade and every product line.
 3. **The testimonials are placeholder copy** carried over from the design brief. Swap them for real,
    attributable quotes or delete the section (`showTestimonials={false}` on `HomePage`).
 4. **The spec sheet carries no typical-properties data** (viscosity index, flash point, pour point).
@@ -178,4 +182,7 @@ Deliberate departures from the design prototypes, all of them things the handoff
 - Unicode glyphs (✆ ✉ ✓ ★ ▾) are replaced with drawn SVG icons in `src/components/Icon.tsx`.
 - The **phone mockup section was dropped** — it showed the client what the site would look like on a
   phone, which the live site does not need to explain to its own visitors.
+- The Made in Europe card sets the **approvals as real text** instead of leaving them to be read off
+  the label photo, which is far too small — and too soft — to resolve them. They are now legible,
+  indexable and read out by screen readers.
 - The footer's "Mockup — content for layout review" line is gone.
