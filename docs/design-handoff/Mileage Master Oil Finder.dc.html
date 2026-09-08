@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;font-family:Archivo,system-ui,sans-serif;color:#111;-webkit-font-smoothing:antialiased}
+  *{box-sizing:border-box}
+  a{color:#E31B23;text-decoration:none}
+  a:hover{color:#B0141A}
+  input,select,button{font-family:inherit}
+  @media print{header{position:static !important} section{break-inside:avoid;page-break-inside:avoid}}
+</style>
+<meta name="omelette-owns-print">
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+
+  <div style="background:#E31B23;color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 28px;padding:9px 20px;font:600 13px/1 Archivo,sans-serif;letter-spacing:.04em">
+    <span style="font-family:Anton,sans-serif;font-weight:400;letter-spacing:.06em;font-size:14px">ORDER TODAY</span>
+    <span style="display:flex;align-items:center;gap:8px"><span style="width:18px;height:18px;border-radius:50%;background:#fff;color:#E31B23;display:flex;align-items:center;justify-content:center;font-size:10px">✆</span>905.602.6897</span>
+    <span style="opacity:.5">|</span>
+    <span style="display:flex;align-items:center;gap:8px"><span style="width:18px;height:18px;border-radius:50%;background:#fff;color:#E31B23;display:flex;align-items:center;justify-content:center;font-size:9px">✉</span>orders@oemfleets.ca</span>
+    <span style="opacity:.5">|</span>
+    <span style="letter-spacing:.12em;font-weight:700;font-size:11px">MADE IN EUROPE · SHIPPED FROM MISSISSAUGA, ON</span>
+  </div>
+
+  <header style="position:sticky;top:0;z-index:20;background:#111;border-bottom:3px solid #E31B23">
+    <div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 24px">
+      <a href="Mileage Master Homepage.dc.html" style="display:flex;align-items:center">
+        <div style="background:#fff;border:3px solid #111;padding:7px 16px 6px;display:flex;flex-direction:column;align-items:center;line-height:.86;box-shadow:0 2px 0 rgba(0,0,0,.35)">
+          <span style="font-family:Anton,sans-serif;font-size:26px;color:#C4171E;letter-spacing:.01em">MILEAGE</span>
+          <span style="font:700 15px/1 'Barlow Condensed',sans-serif;color:#111;letter-spacing:.34em;padding-left:.34em;margin-top:2px">MASTER<span style="font-size:8px;vertical-align:super;letter-spacing:0">®</span></span>
+        </div>
+      </a>
+      <nav style="display:flex;flex-wrap:wrap;gap:4px 26px;margin-left:auto;font:600 13px/1 Archivo,sans-serif;letter-spacing:.08em">
+        <a href="#finder" style="color:#F5B60D" style-hover="color:#E31B23">OIL FINDER</a>
+        <a href="Mileage Master Homepage.dc.html#grades" style="color:#fff" style-hover="color:#E31B23">PRODUCTS</a>
+        <a href="Mileage Master Homepage.dc.html#europe" style="color:#fff" style-hover="color:#E31B23">MADE IN EUROPE</a>
+        <a href="Mileage Master Homepage.dc.html#specs" style="color:#fff" style-hover="color:#E31B23">APPROVALS</a>
+        <a href="Mileage Master Homepage.dc.html#dealers" style="color:#fff" style-hover="color:#E31B23">BECOME A DEALER</a>
+      </nav>
+      <a href="#results" style="background:#E31B23;color:#fff;font:700 13px/1 Archivo,sans-serif;letter-spacing:.08em;padding:13px 20px;border:2px solid #E31B23" style-hover="background:#fff;color:#E31B23">REQUEST PRICING</a>
+    </div>
+  </header>
+
+  <div style="background:#F2F1EF;border-bottom:1px solid rgba(0,0,0,.09)">
+    <div style="max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;flex-wrap:wrap;gap:10px;font:600 12px/1 Archivo,sans-serif;letter-spacing:.06em;color:#777">
+      <a href="Mileage Master Homepage.dc.html" style="color:#777">Home</a><span>›</span>
+      <a href="#finder" style="color:#777">Find the right motor oil</a><span>›</span>
+      <span style="color:#111;font-weight:700">Product recommendations</span>
+    </div>
+  </div>
+
+  <section id="finder" style="background:#111;color:#fff">
+    <div style="max-width:1240px;margin:0 auto;padding:56px 24px 60px">
+      <div style="display:inline-flex;align-items:center;gap:10px;background:#E31B23;color:#fff;padding:7px 12px;font:700 11px/1 Archivo,sans-serif;letter-spacing:.16em;margin-bottom:24px">
+        <span style="width:7px;height:7px;background:#F5B60D;border-radius:50%"></span>CATALOGUE · OIL FINDER
+      </div>
+      <h1 style="margin:0 0 14px;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(38px,5.6vw,76px);line-height:.9;text-transform:uppercase">Find the right<br><span style="color:#E31B23">motor oil</span></h1>
+      <p style="margin:0 0 34px;font:400 18px/1.55 Archivo,sans-serif;color:rgba(255,255,255,.7);max-width:640px">Tell us a bit more about your vehicle and we'll tell you how to best protect it — grade, capacity, licences and case pricing.</p>
+
+      <div style="background:#F2F1EF;border:3px solid #F5B60D;padding:26px 24px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px">
+          <label style="display:flex;flex-direction:column;gap:8px;font:700 11px/1 Archivo,sans-serif;letter-spacing:.14em;color:#111">YEAR
+            <select value="{{ year }}" onChange="{{ onYear }}" style="appearance:none;background:#fff;border:2px solid #111;color:#111;padding:14px 14px;font:600 15px/1 Archivo,sans-serif;cursor:pointer">
+              <sc-for list="{{ years }}" as="y" hint-placeholder-count="4"><option value="{{ y }}">{{ y }}</option></sc-for>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:8px;font:700 11px/1 Archivo,sans-serif;letter-spacing:.14em;color:#111">MAKE
+            <select value="{{ make }}" onChange="{{ onMake }}" style="appearance:none;background:#fff;border:2px solid #111;color:#111;padding:14px 14px;font:600 15px/1 Archivo,sans-serif;cursor:pointer">
+              <sc-for list="{{ makes }}" as="m" hint-placeholder-count="6"><option value="{{ m }}">{{ m }}</option></sc-for>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:8px;font:700 11px/1 Archivo,sans-serif;letter-spacing:.14em;color:#111">MODEL
+            <select value="{{ model }}" onChange="{{ onModel }}" style="appearance:none;background:#fff;border:2px solid #111;color:#111;padding:14px 14px;font:600 15px/1 Archivo,sans-serif;cursor:pointer">
+              <sc-for list="{{ models }}" as="m" hint-placeholder-count="5"><option value="{{ m }}">{{ m }}</option></sc-for>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:8px;font:700 11px/1 Archivo,sans-serif;letter-spacing:.14em;color:#111">ENGINE
+            <select value="{{ engine }}" onChange="{{ onEngine }}" style="appearance:none;background:#fff;border:2px solid #111;color:#111;padding:14px 14px;font:600 15px/1 Archivo,sans-serif;cursor:pointer">
+              <sc-for list="{{ engines }}" as="e" hint-placeholder-count="2"><option value="{{ e }}">{{ e }}</option></sc-for>
+            </select>
+          </label>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:22px">
+          <button onClick="{{ toggleHighMileage }}" style="display:flex;align-items:center;gap:11px;background:none;border:none;padding:0;cursor:pointer;font:700 13px/1 Archivo,sans-serif;letter-spacing:.06em;color:#111">
+            <span style="width:26px;height:26px;border:2px solid #111;background:{{ hmBg }};color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px">{{ hmMark }}</span>
+            Over 120,000 kilometres?
+          </button>
+          <button onClick="{{ search }}" style="background:#E31B23;color:#fff;border:2px solid #E31B23;padding:16px 28px;font:700 14px/1 Archivo,sans-serif;letter-spacing:.09em;cursor:pointer" style-hover="background:#111;border-color:#111">GET RECOMMENDATIONS</button>
+          <span style="font:400 13px/1.4 Archivo,sans-serif;color:#666">Can't find your model? <a href="#help">Tell us what you're missing.</a></span>
+        </div>
+      </div>
+      <p style="margin:16px 0 0;font:400 13px/1.5 Archivo,sans-serif;color:rgba(255,255,255,.5);max-width:720px">Please consult your vehicle manufacturer's manual for information specific to your vehicle. Engine oil capacity shown is with an oil filter change.</p>
+    </div>
+  </section>
+
+  <sc-if value="{{ hasResults }}" hint-placeholder-val="{{ true }}">
+  <section id="results" style="background:#fff">
+    <div style="max-width:1240px;margin:0 auto;padding:56px 24px 64px">
+      <div style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.16em;color:#E31B23;margin-bottom:12px">RECOMMENDED FOR YOUR</div>
+      <h2 style="margin:0 0 10px;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(26px,3.6vw,46px);line-height:1.02;text-transform:uppercase">{{ vehicleLine }}</h2>
+      <p style="margin:0 0 20px;font:400 17px/1.5 Archivo,sans-serif;color:#555;max-width:660px">Based on what you've told us, these products protect your vehicle to the manufacturer's specification.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 0;border-top:4px solid #111;border-bottom:1px solid rgba(0,0,0,.12);margin-bottom:34px">
+        <div style="padding:16px 30px 16px 0;border-right:1px solid rgba(0,0,0,.12);padding-right:30px">
+          <div style="font:700 10px/1 Archivo,sans-serif;letter-spacing:.14em;color:#888;margin-bottom:7px">ENGINE OIL CAPACITY</div>
+          <div style="font-family:Anton,sans-serif;font-size:26px;color:#E31B23;line-height:1">{{ capacity }}</div>
+        </div>
+        <div style="padding:16px 30px;border-right:1px solid rgba(0,0,0,.12)">
+          <div style="font:700 10px/1 Archivo,sans-serif;letter-spacing:.14em;color:#888;margin-bottom:7px">SPECIFICATION</div>
+          <div style="font:700 18px/1 Archivo,sans-serif">{{ spec }}</div>
+        </div>
+        <div style="padding:16px 30px">
+          <div style="font:700 10px/1 Archivo,sans-serif;letter-spacing:.14em;color:#888;margin-bottom:7px">DRAIN INTERVAL</div>
+          <div style="font:700 18px/1 Archivo,sans-serif">{{ drain }}</div>
+        </div>
+      </div>
+
+      <div style="display:inline-flex;border:2px solid #111;margin-bottom:26px">
+        <span style="background:#111;color:#fff;padding:11px 20px;font:700 12px/1 Archivo,sans-serif;letter-spacing:.12em">MOTOR OIL</span>
+        <span style="padding:11px 20px;font:700 12px/1 Archivo,sans-serif;letter-spacing:.12em;color:#888">FILTERS — COMING SOON</span>
+      </div>
+
+      <div style="display:grid;gap:22px">
+        <sc-for list="{{ products }}" as="p" hint-placeholder-count="2">
+          <div style="border:3px solid #111;display:grid;grid-template-columns:minmax(0,240px) minmax(0,1fr);align-items:stretch">
+            <div style="background:#F2F1EF;display:flex;align-items:center;justify-content:center;padding:22px;border-right:3px solid #111">
+              <img src="assets/jug-front.png" alt="Mileage Master 5L jug" style="width:100%;max-width:170px;height:auto;display:block;mix-blend-mode:multiply">
+            </div>
+            <div style="padding:28px 28px 26px;display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px">
+                <span style="background:{{ p.tagBg }};color:{{ p.tagFg }};font:700 10px/1 Archivo,sans-serif;letter-spacing:.14em;padding:7px 10px">{{ p.tag }}</span>
+                <span style="font:700 11px/1 Archivo,sans-serif;letter-spacing:.12em;color:#888">{{ p.pack }}</span>
+              </div>
+              <div style="font-family:Anton,sans-serif;font-size:clamp(24px,2.6vw,34px);line-height:1.02;text-transform:uppercase">{{ p.name }}</div>
+              <p style="margin:0;font:400 15px/1.6 Archivo,sans-serif;color:#444;max-width:640px">{{ p.blurb }}</p>
+              <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:2px">
+                <a href="Mileage Master Homepage.dc.html#grades" style="background:#111;color:#fff;font:700 12px/1 Archivo,sans-serif;letter-spacing:.09em;padding:14px 20px" style-hover="background:#E31B23">VIEW PRODUCT</a>
+                <a href="#quote" style="background:#E31B23;color:#fff;font:700 12px/1 Archivo,sans-serif;letter-spacing:.09em;padding:14px 20px" style-hover="background:#B0141A">REQUEST CASE PRICE</a>
+                <a href="Mileage Master Homepage.dc.html#specs" style="border:2px solid #111;color:#111;font:700 12px/1 Archivo,sans-serif;letter-spacing:.09em;padding:12px 18px" style-hover="background:#F5B60D">SPEC SHEET</a>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;align-items:center">
+        <button onClick="{{ reset }}" style="background:#F2F1EF;border:2px solid #111;color:#111;padding:14px 22px;font:700 12px/1 Archivo,sans-serif;letter-spacing:.09em;cursor:pointer" style-hover="background:#F5B60D">SEARCH AGAIN</button>
+        <span style="font:400 13px/1.5 Archivo,sans-serif;color:#777">Recommendations are guidance only. Always confirm against the owner's manual.</span>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section id="quote" style="background:#E31B23;color:#fff">
+    <div style="max-width:1240px;margin:0 auto;padding:52px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:34px;align-items:center">
+      <div>
+        <h2 style="margin:0 0 14px;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,46px);line-height:.94;text-transform:uppercase">Priced by the case,<br>not by the litre</h2>
+        <p style="margin:0;font:400 17px/1.55 Archivo,sans-serif;color:rgba(255,255,255,.92);max-width:460px">Send the grade and your monthly volume. Quotes go out the same business day.</p>
+      </div>
+      <div style="background:#fff;color:#111;border:3px solid #111;padding:26px 24px">
+        <div style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.14em;color:#E31B23;margin-bottom:16px">REQUEST WHOLESALE PRICING</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:10px">
+          <input placeholder="Business name" style="border:2px solid #111;padding:13px 14px;font:400 15px/1 Archivo,sans-serif;color:#111;background:#fff;width:100%">
+          <input placeholder="Phone" style="border:2px solid #111;padding:13px 14px;font:400 15px/1 Archivo,sans-serif;color:#111;background:#fff;width:100%">
+        </div>
+        <input placeholder="Email" style="border:2px solid #111;padding:13px 14px;font:400 15px/1 Archivo,sans-serif;color:#111;background:#fff;width:100%;margin-bottom:10px">
+        <input placeholder="Grades and monthly volume" style="border:2px solid #111;padding:13px 14px;font:400 15px/1 Archivo,sans-serif;color:#111;background:#fff;width:100%;margin-bottom:14px">
+        <button style="width:100%;background:#111;color:#fff;border:none;padding:16px;font:700 14px/1 Archivo,sans-serif;letter-spacing:.09em;cursor:pointer" style-hover="background:#E31B23">SEND MY REQUEST</button>
+        <div style="margin-top:12px;font:400 12px/1.5 Archivo,sans-serif;color:#666">Or call 905.602.6897 — quotes same business day.</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="help" style="background:#111;color:#fff">
+    <div style="max-width:1240px;margin:0 auto;padding:26px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 30px">
+      <span style="font-family:Anton,sans-serif;font-size:26px;letter-spacing:.02em;text-transform:uppercase">Vehicle not listed?</span>
+      <span style="display:flex;align-items:center;gap:12px;font-family:Anton,sans-serif;font-size:26px"><span style="width:38px;height:38px;border-radius:50%;background:#E31B23;display:flex;align-items:center;justify-content:center;font-size:17px">✆</span>905.602.6897</span>
+      <span style="display:flex;align-items:center;gap:12px;font:600 18px/1 Archivo,sans-serif"><span style="width:38px;height:38px;border-radius:50%;background:#E31B23;display:flex;align-items:center;justify-content:center;font-size:15px">✉</span>orders@oemfleets.ca</span>
+      <span style="margin-left:auto;font:700 12px/1.4 Archivo,sans-serif;letter-spacing:.12em;color:rgba(255,255,255,.6)">MON–FRI 8–5 · MISSISSAUGA, ON</span>
+    </div>
+  </div>
+
+  <footer style="background:#F2F1EF;border-top:4px solid #E31B23">
+    <div style="max-width:1240px;margin:0 auto;padding:34px 24px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;font:400 13px/1.4 Archivo,sans-serif;color:#666">
+      <div style="background:#fff;border:3px solid #111;padding:6px 12px 5px;display:inline-flex;flex-direction:column;align-items:center;line-height:.86">
+        <span style="font-family:Anton,sans-serif;font-size:19px;color:#C4171E">MILEAGE</span>
+        <span style="font:700 11px/1 'Barlow Condensed',sans-serif;color:#111;letter-spacing:.34em;padding-left:.34em;margin-top:2px">MASTER<span style="font-size:7px;vertical-align:super;letter-spacing:0">®</span></span>
+      </div>
+      <span>© 2026 Mileage Master Inc. · Mississauga, ON</span>
+      <span>Made in Europe</span>
+      <span>API SP licensed</span>
+      <span style="margin-left:auto">Mockup — content for layout review</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280},&quot;showBudgetLine&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Catalogue&quot;}}">
+const DATA = {
+  Toyota: {
+    Corolla: [{e:"2.0L I4 GAS FI", g:"0W-16", cap:"4.4 L", spec:"API SP · ILSAC GF-6B", drain:"Up to 10,000 km"},
+              {e:"1.8L I4 Hybrid", g:"0W-16", cap:"4.2 L", spec:"API SP · ILSAC GF-6B", drain:"Up to 10,000 km"}],
+    RAV4:    [{e:"2.5L I4 GAS FI", g:"0W-20", cap:"4.8 L", spec:"API SP · ILSAC GF-6A", drain:"Up to 12,000 km"},
+              {e:"2.5L I4 Hybrid", g:"0W-16", cap:"4.5 L", spec:"API SP · ILSAC GF-6B", drain:"Up to 10,000 km"}],
+    Tacoma:  [{e:"2.4L I4 (C) Turbocharged GAS FI", g:"0W-20", cap:"5.7 L", spec:"API SP · ILSAC GF-6A", drain:"Up to 12,000 km"}]
+  },
+  Honda: {
+    Civic:   [{e:"2.0L I4 GAS FI", g:"0W-20", cap:"3.7 L", spec:"API SP · ILSAC GF-6A", drain:"Up to 12,000 km"},
+              {e:"1.5L I4 (C) Turbocharged GAS FI", g:"0W-20", cap:"3.4 L", spec:"API SP · ILSAC GF-6A", drain:"Up to 12,000 km"}],
+    "CR-V":  [{e:"1.5L I4 (C) Turbocharged GAS FI", g:"0W-20", cap:"3.7 L", spec:"API SP · ILSAC GF-6A", drain:"Up to 12,000 km"}]
+  },
+  Kia: {
+    K4:      [{e:"1.6L L4 (C) Turbocharged GAS FI", g:"0W-20", cap:"4.2 L", spec:"API SP · ILSAC GF-6A", drain:"Up to 12,000 km"},
+              {e:"2.0L L4 (E) GAS FI", g:"0W-20", cap:"4.6 L", spec:"API SP · ILSAC GF-6A", drain:"Up to 12,000 km"}],
+    Sportage:[{e:"2.5L L4 GAS FI", g:"0W-20", cap:"5.4 L", spec:"API SP · ILSAC GF-6A", drain:"Up to 12,000 km"}],
+    Telluride:[{e:"3.8L V6 GAS FI", g:"5W-30", cap:"5.7 L", spec:"API SP · ILSAC GF-6A", drain:"Up to 12,000 km"}]
+  },
+  Ford: {
+    "F-150": [{e:"2.7L V6 (C) Turbocharged GAS FI", g:"5W-30", cap:"5.7 L", spec:"API SP · Ford WSS-M2C961-A1", drain:"Up to 12,000 km"},
+              {e:"5.0L V8 GAS FI", g:"5W-30", cap:"8.0 L", spec:"API SP · Ford WSS-M2C961-A1", drain:"Up to 12,000 km"}],
+    Escape:  [{e:"1.5L I3 (C) Turbocharged GAS FI", g:"5W-20", cap:"4.3 L", spec:"API SP · Ford WSS-M2C947-A", drain:"Up to 12,000 km"}]
+  },
+  Chevrolet: {
+    Silverado:[{e:"5.3L V8 GAS FI", g:"0W-20", cap:"7.6 L", spec:"API SP · GM dexos1 Gen 3", drain:"Up to 12,000 km"}],
+    Equinox: [{e:"1.5L I4 (C) Turbocharged GAS FI", g:"0W-20", cap:"4.2 L", spec:"API SP · GM dexos1 Gen 3", drain:"Up to 12,000 km"}]
+  },
+  Volkswagen: {
+    Jetta:   [{e:"1.5L I4 (C) Turbocharged GAS FI", g:"0W-20", cap:"5.7 L", spec:"API SP · VW 508 00", drain:"Up to 15,000 km"}],
+    Tiguan:  [{e:"2.0L I4 (C) Turbocharged GAS FI", g:"5W-40", cap:"6.6 L", spec:"ACEA A3/B4 · VW 502 00", drain:"Up to 15,000 km"}]
+  },
+  BMW: {
+    "330i":  [{e:"2.0L I4 (C) Turbocharged GAS FI", g:"0W-30", cap:"5.2 L", spec:"ACEA A5/B5 · BMW LL-01 FE", drain:"Up to 15,000 km"}],
+    X3:      [{e:"2.0L I4 (C) Turbocharged GAS FI", g:"5W-40", cap:"5.5 L", spec:"ACEA A3/B4 · BMW LL-01", drain:"Up to 15,000 km"}]
+  }
+};
+const BLURB = {
+  "0W-8":"Ultra-low viscosity for the newest hybrid and Atkinson-cycle engines. Maximum fuel economy with a stable film at operating temperature.",
+  "0W-16":"Built for late-model hybrids calling for 0W-16. Protects at start-up through Canadian winters and holds pressure once hot.",
+  "0W-20":"The workhorse grade. LSPI protection and sludge control for turbocharged direct-injection engines.",
+  "0W-30":"European-spec light viscosity for extended drain intervals on gasoline engines running long service schedules.",
+  "5W-20":"Domestic-fleet standard fill. Stable oil film between sliding surfaces and rust protection on short-trip duty cycles.",
+  "5W-30":"The most requested grade in the bay. Broad OEM coverage across domestic, Asian and European gasoline engines.",
+  "5W-40":"High-temperature protection for performance and heavily loaded engines, including turbos running hot."
+};
+const YEARS = Array.from({length:22},(_,i)=>String(2026-i));
+
+class Component extends DCLogic {
+  state = { year:"2025", make:"Kia", model:"K4", engine:"1.6L L4 (C) Turbocharged GAS FI", highMileage:true, submitted:true };
+  variants() {
+    const m = DATA[this.state.make] || {};
+    return m[this.state.model] || [];
+  }
+  current() {
+    const v = this.variants();
+    return v.find(x => x.e === this.state.engine) || v[0] || {g:"0W-20",cap:"4.5 L",spec:"API SP",drain:"Up to 12,000 km"};
+  }
+  renderVals() {
+    const s = this.state;
+    const makes = Object.keys(DATA);
+    const models = Object.keys(DATA[s.make] || {});
+    const engines = this.variants().map(v => v.e);
+    const c = this.current();
+    const products = [{
+      name: c.g + " Premium Full Synthetic",
+      tag: "RECOMMENDED", tagBg: "#E31B23", tagFg: "#fff",
+      pack: "5 L JUG · 4 PER CASE",
+      blurb: BLURB[c.g] || BLURB["0W-20"]
+    }];
+    if (s.highMileage) {
+      products.push({
+        name: c.g + " High Mileage Full Synthetic",
+        tag: "OVER 120,000 KM", tagBg: "#F5B60D", tagFg: "#111",
+        pack: "5 L JUG · 4 PER CASE",
+        blurb: "Seal conditioners and an elevated detergent load to slow leaks and control deposits in higher-kilometre engines, on the same " + c.spec.split(" · ")[0] + " licence."
+      });
+    }
+    if (this.props.showBudgetLine !== false) products.push({
+      name: c.g + " Synthetic Blend",
+      tag: "BUDGET LINE", tagBg: "#111", tagFg: "#fff",
+      pack: "4 L JUG · 6 PER CASE",
+      blurb: "Meets the same viscosity requirement at a lower landed cost for shorter drain intervals and value service packages."
+    });
+    const set = k => e => this.setState({ [k]: e.target.value });
+    return {
+      years: YEARS, makes, models, engines,
+      year: s.year, make: s.make, model: s.model, engine: s.engine,
+      onYear: set("year"),
+      onMake: e => {
+        const make = e.target.value;
+        const model = Object.keys(DATA[make])[0];
+        this.setState({ make, model, engine: DATA[make][model][0].e });
+      },
+      onModel: e => {
+        const model = e.target.value;
+        this.setState({ model, engine: DATA[s.make][model][0].e });
+      },
+      onEngine: set("engine"),
+      toggleHighMileage: () => this.setState({ highMileage: !s.highMileage }),
+      hmBg: s.highMileage ? "#E31B23" : "#fff",
+      hmMark: s.highMileage ? "✓" : "",
+      search: () => this.setState({ submitted: true }),
+      reset: () => this.setState({ submitted: false }),
+      hasResults: s.submitted,
+      vehicleLine: s.year + " " + s.make + " " + s.model + " · " + s.engine,
+      capacity: c.cap, spec: c.spec, drain: c.drain,
+      products
+    };
+  }
+}
+
+</script>
+</body>
+</html>

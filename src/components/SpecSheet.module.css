@@ -1,0 +1,136 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(17, 17, 17, 0.72);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px;
+  overflow: auto;
+}
+
+.sheet {
+  background: var(--mm-white);
+  border: 3px solid var(--mm-ink);
+  max-width: 720px;
+  width: 100%;
+  padding: 28px 28px 26px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 4px solid var(--mm-ink);
+}
+
+.docType {
+  font: 700 11px/1.4 var(--mm-font-ui);
+  letter-spacing: 0.16em;
+  color: var(--mm-text-muted);
+  margin-left: auto;
+  text-align: right;
+}
+
+.close {
+  background: transparent;
+  border: 2px solid var(--mm-ink);
+  color: var(--mm-ink);
+  padding: 8px;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: var(--mm-ink);
+  color: var(--mm-white);
+}
+
+.kicker {
+  font: 700 11px/1 var(--mm-font-ui);
+  letter-spacing: 0.16em;
+  color: var(--mm-red);
+  margin: 22px 0 10px;
+}
+
+.grade {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  font-size: clamp(38px, 6vw, 56px);
+  line-height: 0.92;
+}
+
+.line {
+  font: 700 16px/1.3 var(--mm-font-ui);
+  letter-spacing: 0.02em;
+  color: var(--mm-ink);
+  margin: 6px 0 16px;
+}
+
+.blurb {
+  margin: 0 0 22px;
+  font: 400 15px/1.6 var(--mm-font-ui);
+  color: var(--mm-text-copy);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid var(--mm-rule-12);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--mm-rule-12);
+  vertical-align: top;
+}
+
+.table th {
+  font: 700 10px/1.4 var(--mm-font-ui);
+  letter-spacing: 0.14em;
+  color: var(--mm-text-muted-3);
+  width: 40%;
+  text-transform: uppercase;
+}
+
+.table td {
+  font: 600 15px/1.4 var(--mm-font-ui);
+}
+
+.note {
+  margin: 20px 0 0;
+  font: 400 12px/1.6 var(--mm-font-ui);
+  color: var(--mm-text-muted-2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+@media print {
+  .overlay {
+    position: static;
+    background: none;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .sheet {
+    border: none;
+    max-width: none;
+    padding: 0;
+  }
+
+  .actions,
+  .close {
+    display: none;
+  }
+}

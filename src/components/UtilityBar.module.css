@@ -1,0 +1,60 @@
+.bar {
+  background: var(--mm-red);
+  color: var(--mm-white);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 28px;
+  padding: 9px 20px;
+  font: 600 13px/1 var(--mm-font-ui);
+  letter-spacing: 0.04em;
+}
+
+.order {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 14px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--mm-white);
+}
+
+.contact:hover {
+  color: var(--mm-white);
+  text-decoration: underline;
+}
+
+.badge {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--mm-white);
+  color: var(--mm-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.divider {
+  opacity: 0.5;
+}
+
+.origin {
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* The pipe separators are decoration; below the wrap point they only add noise. */
+@media (max-width: 820px) {
+  .divider {
+    display: none;
+  }
+}

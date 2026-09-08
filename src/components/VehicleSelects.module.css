@@ -1,0 +1,67 @@
+.grid {
+  display: grid;
+  align-items: end;
+}
+
+.ink {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.light {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  font: 700 11px/1 var(--mm-font-ui);
+  letter-spacing: 0.14em;
+}
+
+.ink .field {
+  gap: 7px;
+  color: var(--mm-on-ink-60);
+}
+
+.light .field {
+  gap: 8px;
+  color: var(--mm-ink);
+}
+
+.select {
+  appearance: none;
+  padding: 14px 38px 14px 14px;
+  font: 600 15px/1 var(--mm-font-ui);
+  border-radius: 0;
+  cursor: pointer;
+  width: 100%;
+  /* appearance:none removes the native caret, so draw one back in. */
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  text-overflow: ellipsis;
+}
+
+.ink .select {
+  background-color: var(--mm-ink-field);
+  border: 2px solid var(--mm-ink-hairline);
+  color: var(--mm-white);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23999999'%3E%3Cpath d='m12 15.4-5.2-5.2 1.4-1.4L12 12.6l3.8-3.8 1.4 1.4z'/%3E%3C/svg%3E");
+}
+
+.light .select {
+  background-color: var(--mm-white);
+  border: 2px solid var(--mm-ink);
+  color: var(--mm-ink);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23111111'%3E%3Cpath d='m12 15.4-5.2-5.2 1.4-1.4L12 12.6l3.8-3.8 1.4 1.4z'/%3E%3C/svg%3E");
+}
+
+.ink .select:hover {
+  border-color: var(--mm-on-ink-35);
+}
+
+.light .select:hover {
+  border-color: var(--mm-red);
+}

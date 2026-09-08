@@ -1,0 +1,84 @@
+.section {
+  background: var(--mm-white);
+}
+
+.inner {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.lead {
+  margin: 6px 0 30px;
+  font: 400 16px/1.5 var(--mm-font-ui);
+  color: var(--mm-text-copy-soft);
+  max-width: 620px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  border: 3px solid var(--mm-ink);
+}
+
+.cardHead {
+  background: var(--mm-ink);
+  color: var(--mm-white);
+  padding: 12px 18px;
+  font: 700 12px/1 var(--mm-font-ui);
+  letter-spacing: 0.14em;
+}
+
+.rows {
+  display: grid;
+  gap: 1px;
+  background: var(--mm-rule-12);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  background: var(--mm-white);
+  padding: 13px 18px;
+  font: 600 15px/1.2 var(--mm-font-ui);
+}
+
+.warranty {
+  border: 3px solid var(--mm-gold);
+  background: var(--mm-ink);
+  color: var(--mm-white);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Shield mark — a clip-path polygon, not an icon. */
+.shield {
+  width: 46px;
+  height: 52px;
+  background: var(--mm-gold);
+  color: var(--mm-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 66%, 50% 100%, 0 66%);
+}
+
+.warrantyTitle {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.warrantyBody {
+  margin: 0;
+  font: 400 14px/1.55 var(--mm-font-ui);
+  color: var(--mm-on-ink-72);
+}

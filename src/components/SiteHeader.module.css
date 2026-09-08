@@ -1,0 +1,103 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--mm-ink);
+  border-bottom: 3px solid var(--mm-red);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 26px;
+  margin-left: auto;
+  font: 600 13px/1 var(--mm-font-ui);
+  letter-spacing: 0.08em;
+}
+
+.link {
+  color: var(--mm-white);
+}
+
+.link:hover {
+  color: var(--mm-red);
+}
+
+/* The page the visitor is on. */
+.current {
+  color: var(--mm-gold);
+}
+
+.current:hover {
+  color: var(--mm-gold);
+}
+
+.cta {
+  flex: 0 0 auto;
+}
+
+/* Toggle is desktop-hidden; the nav wraps normally above the breakpoint. */
+.toggle {
+  display: none;
+  margin-left: auto;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  border: 2px solid var(--mm-on-ink-35);
+  color: var(--mm-white);
+  padding: 10px 14px;
+  font: 700 12px/1 var(--mm-font-ui);
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  border-color: var(--mm-white);
+}
+
+@media (max-width: 860px) {
+  .toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--mm-ink-hairline);
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .nav .link {
+    padding: 15px 2px;
+    border-bottom: 1px solid var(--mm-ink-hairline);
+  }
+
+  .cta {
+    display: none;
+    width: 100%;
+  }
+
+  .ctaOpen {
+    display: inline-flex;
+  }
+}

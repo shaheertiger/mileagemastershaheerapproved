@@ -1,0 +1,95 @@
+.logo {
+  background: var(--mm-white);
+  border: 3px solid var(--mm-ink);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.86;
+  color: var(--mm-ink);
+}
+
+.elevated {
+  box-shadow: var(--mm-shadow-logo);
+}
+
+.top {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  color: var(--mm-red-logo);
+  letter-spacing: 0.01em;
+}
+
+.bottom {
+  font-family: var(--mm-font-condensed);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--mm-ink);
+  letter-spacing: 0.34em;
+  /* The tracking pushes the word right; matching left padding re-centres it. */
+  padding-left: 0.34em;
+  margin-top: 2px;
+}
+
+.registered {
+  vertical-align: super;
+  letter-spacing: 0;
+}
+
+/* lg — site header */
+.lg {
+  padding: 7px 16px 6px;
+}
+.lg .top {
+  font-size: 26px;
+}
+.lg .bottom {
+  font-size: 15px;
+}
+.lg .registered {
+  font-size: 8px;
+}
+
+/* md — homepage footer */
+.md {
+  padding: 7px 14px 6px;
+}
+.md .top {
+  font-size: 22px;
+}
+.md .bottom {
+  font-size: 13px;
+}
+.md .registered {
+  font-size: 7px;
+}
+
+/* sm — condensed footer */
+.sm {
+  padding: 6px 12px 5px;
+}
+.sm .top {
+  font-size: 19px;
+}
+.sm .bottom {
+  font-size: 11px;
+}
+.sm .registered {
+  font-size: 7px;
+}
+
+/* xs — phone mockups */
+.xs {
+  border-width: 2px;
+  padding: 5px 10px 4px;
+}
+.xs .top {
+  font-size: 15px;
+}
+.xs .bottom {
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  padding-left: 0.3em;
+}
+.xs .registered {
+  font-size: 6px;
+}

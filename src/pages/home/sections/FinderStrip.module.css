@@ -1,0 +1,102 @@
+.section {
+  background: var(--mm-ink);
+  color: var(--mm-white);
+}
+
+.inner {
+  padding-top: 52px;
+  padding-bottom: 56px;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px 32px;
+  margin-bottom: 26px;
+}
+
+.heading {
+  letter-spacing: 0.01em;
+}
+
+.lead {
+  margin: 0;
+  font: 400 15px/1.5 var(--mm-font-ui);
+  color: var(--mm-on-ink-66);
+  max-width: 420px;
+}
+
+/* The submit button sits in the select grid as a fifth cell. */
+.submitCell {
+  display: flex;
+  align-items: flex-end;
+}
+
+.panel {
+  margin-top: 20px;
+  background: var(--mm-ink-raised);
+  border-left: 6px solid var(--mm-gold);
+  padding: 20px 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 26px;
+}
+
+.panelLabel {
+  font: 700 11px/1 var(--mm-font-ui);
+  letter-spacing: 0.16em;
+  color: var(--mm-gold);
+}
+
+.panelGrade {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.panelDetail {
+  font: 400 14px/1.5 var(--mm-font-ui);
+  color: var(--mm-on-ink-72);
+  max-width: 420px;
+}
+
+.panelActions {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 22px;
+}
+
+.panelLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--mm-white);
+  border-bottom: 2px solid var(--mm-red);
+  font: 700 13px/1 var(--mm-font-ui);
+  letter-spacing: 0.08em;
+  padding-bottom: 3px;
+}
+
+.panelLink:hover {
+  color: var(--mm-gold);
+  border-bottom-color: var(--mm-gold);
+}
+
+.panelSecondary {
+  composes: panelLink;
+  border-bottom-color: var(--mm-on-ink-35);
+}
+
+.empty {
+  margin-top: 20px;
+  background: var(--mm-ink-raised);
+  border-left: 6px solid var(--mm-red);
+  padding: 20px 22px;
+  font: 400 15px/1.55 var(--mm-font-ui);
+  color: var(--mm-on-ink-72);
+}

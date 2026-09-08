@@ -1,0 +1,140 @@
+.section {
+  background: var(--mm-red);
+  color: var(--mm-white);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 34px;
+  align-items: center;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.compact .inner {
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+
+.heading {
+  margin: 0 0 14px;
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.compact .heading {
+  font-size: clamp(28px, 3.6vw, 46px);
+}
+
+.lead {
+  margin: 0;
+  font: 400 17px/1.55 var(--mm-font-ui);
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 460px;
+  text-wrap: pretty;
+}
+
+.card {
+  background: var(--mm-white);
+  color: var(--mm-ink);
+  border: 3px solid var(--mm-ink);
+  padding: 26px 24px;
+  scroll-margin-top: 110px;
+}
+
+.cardLabel {
+  font: 700 12px/1 var(--mm-font-ui);
+  letter-spacing: 0.14em;
+  color: var(--mm-red);
+  margin-bottom: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.field:last-of-type {
+  margin-bottom: 14px;
+}
+
+.input {
+  border: 2px solid var(--mm-ink);
+  padding: 13px 14px;
+  font: 400 15px/1.2 var(--mm-font-ui);
+  color: var(--mm-ink);
+  background: var(--mm-white);
+  width: 100%;
+  border-radius: 0;
+}
+
+.input::placeholder {
+  color: var(--mm-text-muted);
+  opacity: 1;
+}
+
+.inputError {
+  border-color: var(--mm-red);
+}
+
+.error {
+  margin: 6px 0 0;
+  font: 600 12px/1.4 var(--mm-font-ui);
+  color: var(--mm-red);
+}
+
+.footnote {
+  margin-top: 12px;
+  font: 400 12px/1.5 var(--mm-font-ui);
+  color: var(--mm-text-muted);
+}
+
+.footnote a {
+  color: var(--mm-ink);
+  text-decoration: underline;
+}
+
+.status {
+  border: 2px solid var(--mm-ink);
+  border-left-width: 6px;
+  padding: 18px 18px 20px;
+}
+
+.statusOk {
+  border-left-color: var(--mm-gold);
+}
+
+.statusError {
+  border-left-color: var(--mm-red);
+}
+
+.statusTitle {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.statusBody {
+  margin: 0 0 16px;
+  font: 400 14px/1.55 var(--mm-font-ui);
+  color: var(--mm-text-copy);
+}
+
+.statusBody a {
+  color: var(--mm-red);
+  text-decoration: underline;
+}

@@ -1,0 +1,138 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* The header is sticky, so anchor targets need to clear it. */
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  background: var(--mm-white);
+  color: var(--mm-ink);
+  font-family: var(--mm-font-ui);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--mm-red);
+  text-decoration: none;
+  transition: background-color var(--mm-transition), color var(--mm-transition),
+    border-color var(--mm-transition);
+}
+
+a:hover {
+  color: var(--mm-red-dark);
+}
+
+button {
+  transition: background-color var(--mm-transition), color var(--mm-transition),
+    border-color var(--mm-transition);
+}
+
+input,
+select,
+button,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* Radius is 0 by design everywhere except phone frames and circular badges. */
+
+:focus-visible {
+  outline: 3px solid var(--mm-gold);
+  outline-offset: 2px;
+}
+
+/* Shared layout primitive: 1240px content column with 24px gutters. */
+.mm-container {
+  max-width: var(--mm-content-width);
+  margin: 0 auto;
+  padding-left: var(--mm-gutter);
+  padding-right: var(--mm-gutter);
+  width: 100%;
+}
+
+/* Anchor offset for in-page section targets under the sticky header. */
+.mm-anchor {
+  scroll-margin-top: 96px;
+}
+
+.mm-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Section heading, used by every section H2 in the design. */
+.mm-h2 {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Uppercase tracked label — the design's workhorse micro-type. */
+.mm-kicker {
+  font: 700 12px/1 var(--mm-font-ui);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Fakes 1px hairlines between cells by letting the parent background show
+   through a 1px grid gap. Used for spec strips and licence lists. */
+.mm-hairline-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--mm-rule-12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .mm-no-print {
+    display: none !important;
+  }
+
+  /* With a spec sheet open, print only the sheet — the class is set by
+     SpecSheet while its overlay is mounted. */
+  body.mm-printing-sheet > #root {
+    display: none !important;
+  }
+}

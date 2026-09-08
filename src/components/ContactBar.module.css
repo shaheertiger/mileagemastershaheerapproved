@@ -1,0 +1,63 @@
+.bar {
+  background: var(--mm-ink);
+  color: var(--mm-white);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 30px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.headline {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--mm-white);
+}
+
+.phone:hover,
+.email:hover {
+  color: var(--mm-gold);
+}
+
+.phone {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.email {
+  font: 600 18px/1 var(--mm-font-ui);
+}
+
+.badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--mm-red);
+  color: var(--mm-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.hours {
+  margin-left: auto;
+  font: 700 12px/1.4 var(--mm-font-ui);
+  letter-spacing: 0.12em;
+  color: var(--mm-on-ink-60);
+}

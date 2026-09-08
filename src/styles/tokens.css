@@ -1,0 +1,63 @@
+/*
+ * Mileage Master design tokens.
+ * Values come straight from the design handoff token table — treat this file as
+ * the single source of truth and never hard-code a hex value in a component.
+ */
+:root {
+  /* Colour */
+  --mm-red: #e31b23;
+  --mm-red-dark: #b0141a;
+  --mm-red-logo: #c4171e;
+  --mm-ink: #111111;
+  --mm-ink-raised: #1a1a1a;
+  --mm-ink-field: #1d1d1d;
+  --mm-ink-hairline: #333333;
+  --mm-gold: #f5b60d;
+  --mm-blue: #0b3b8c;
+  --mm-bone: #f2f1ef;
+  --mm-white: #ffffff;
+
+  --mm-text-body: #3a3a3a;
+  --mm-text-copy: #444444;
+  --mm-text-copy-soft: #555555;
+  --mm-text-muted: #666666;
+  --mm-text-muted-2: #777777;
+  --mm-text-muted-3: #888888;
+
+  /* Hairlines over light backgrounds */
+  --mm-rule-08: rgba(0, 0, 0, 0.08);
+  --mm-rule-09: rgba(0, 0, 0, 0.09);
+  --mm-rule-10: rgba(0, 0, 0, 0.1);
+  --mm-rule-12: rgba(0, 0, 0, 0.12);
+  --mm-rule-14: rgba(0, 0, 0, 0.14);
+
+  /* Text over ink backgrounds */
+  --mm-on-ink-74: rgba(255, 255, 255, 0.74);
+  --mm-on-ink-72: rgba(255, 255, 255, 0.72);
+  --mm-on-ink-70: rgba(255, 255, 255, 0.7);
+  --mm-on-ink-66: rgba(255, 255, 255, 0.66);
+  --mm-on-ink-62: rgba(255, 255, 255, 0.62);
+  --mm-on-ink-60: rgba(255, 255, 255, 0.6);
+  --mm-on-ink-55: rgba(255, 255, 255, 0.55);
+  --mm-on-ink-50: rgba(255, 255, 255, 0.5);
+  --mm-on-ink-35: rgba(255, 255, 255, 0.35);
+  --mm-on-ink-14: rgba(255, 255, 255, 0.14);
+
+  /* Type */
+  --mm-font-display: Anton, 'Arial Narrow', sans-serif;
+  --mm-font-ui: Archivo, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mm-font-condensed: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+
+  /* Layout */
+  --mm-content-width: 1240px;
+  --mm-gutter: 24px;
+  --mm-section-pad: 64px;
+
+  /* Motion — the prototype declares no transitions; 150ms ease is the house
+     standard applied to background and colour only, per the handoff note. */
+  --mm-transition: 150ms ease;
+
+  /* Elevation — the design uses exactly two shadows. */
+  --mm-shadow-logo: 0 2px 0 rgba(0, 0, 0, 0.35);
+  --mm-shadow-phone: 0 24px 48px rgba(0, 0, 0, 0.22);
+}

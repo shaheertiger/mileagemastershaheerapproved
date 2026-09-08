@@ -1,0 +1,134 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-family: var(--mm-font-ui);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  cursor: pointer;
+  /* Radius is 0 across the whole design — do not add one here. */
+  border-radius: 0;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Sizes — outline variants carry their border inside the same box, so the
+   padding below already accounts for the 2px on every variant. */
+.xl {
+  font-size: 14px;
+  padding: 16px 28px;
+}
+.lg {
+  font-size: 14px;
+  padding: 15px 24px;
+}
+.md {
+  font-size: 13px;
+  padding: 13px 20px;
+}
+.sm {
+  font-size: 12px;
+  padding: 12px 18px;
+}
+
+/* Solid red — the primary call to action. */
+.red {
+  background: var(--mm-red);
+  border-color: var(--mm-red);
+  color: var(--mm-white);
+}
+.red:hover {
+  background: var(--mm-red-dark);
+  border-color: var(--mm-red-dark);
+  color: var(--mm-white);
+}
+
+/* Solid red that inverts to white on hover — used on ink backgrounds. */
+.redInvert {
+  background: var(--mm-red);
+  border-color: var(--mm-red);
+  color: var(--mm-white);
+}
+.redInvert:hover {
+  background: var(--mm-white);
+  color: var(--mm-red);
+}
+
+/* Solid red that darkens to ink — the catalogue's primary lookup action. */
+.redInk {
+  background: var(--mm-red);
+  border-color: var(--mm-red);
+  color: var(--mm-white);
+}
+.redInk:hover {
+  background: var(--mm-ink);
+  border-color: var(--mm-ink);
+  color: var(--mm-white);
+}
+
+/* Solid ink. */
+.ink {
+  background: var(--mm-ink);
+  border-color: var(--mm-ink);
+  color: var(--mm-white);
+}
+.ink:hover {
+  background: var(--mm-red);
+  border-color: var(--mm-red);
+  color: var(--mm-white);
+}
+
+/* Outlined ink on a light background. */
+.outline {
+  background: transparent;
+  border-color: var(--mm-ink);
+  color: var(--mm-ink);
+}
+.outline:hover {
+  background: var(--mm-ink);
+  color: var(--mm-white);
+}
+
+/* Outlined ink that fills gold — spec sheet and search-again actions. */
+.outlineGold {
+  background: transparent;
+  border-color: var(--mm-ink);
+  color: var(--mm-ink);
+}
+.outlineGold:hover {
+  background: var(--mm-gold);
+  color: var(--mm-ink);
+}
+
+/* Outlined on an ink background. */
+.onInk {
+  background: transparent;
+  border-color: var(--mm-on-ink-35);
+  color: var(--mm-white);
+}
+.onInk:hover {
+  border-color: var(--mm-white);
+  color: var(--mm-white);
+}
+
+/* Bone fill with an ink outline — the catalogue's "search again". */
+.bone {
+  background: var(--mm-bone);
+  border-color: var(--mm-ink);
+  color: var(--mm-ink);
+}
+.bone:hover {
+  background: var(--mm-gold);
+  color: var(--mm-ink);
+}
+
+.block {
+  width: 100%;
+}
