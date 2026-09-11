@@ -26,6 +26,7 @@
   align-items: center;
   gap: 12px;
   color: var(--mm-white);
+  min-width: 0;
 }
 
 .phone:hover,
@@ -60,4 +61,5 @@
   font: 700 12px/1.4 var(--mm-font-ui);
   letter-spacing: 0.12em;
   color: var(--mm-on-ink-60);
+  min-width: 0;
 }
