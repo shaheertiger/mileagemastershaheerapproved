@@ -10,6 +10,7 @@
 html {
   /* The header is sticky, so anchor targets need to clear it. */
   scroll-padding-top: 96px;
+  overflow-x: hidden;
 }
 
 body {

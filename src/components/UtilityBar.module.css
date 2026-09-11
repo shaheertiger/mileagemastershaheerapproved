@@ -50,6 +50,8 @@
   letter-spacing: 0.12em;
   font-weight: 700;
   font-size: 11px;
+  text-align: center;
+  max-width: 100%;
 }
 
 /* The pipe separators are decoration; below the wrap point they only add noise. */
