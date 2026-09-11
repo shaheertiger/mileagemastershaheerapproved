@@ -220,7 +220,49 @@ export const VEHICLES: VehicleMake[] = [
   {
     name: 'Chevrolet',
     models: [
+            {
+        name: 'Equinox',
+        applications: [
+          { engine: '1.5L L4 (C) Turbocharged GAS FI', from: 2018, to: 2026, grade: '0W-20', capacityL: 4, spec: SPEC.dexos },
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2018, to: 2020, grade: '5W-30', capacityL: 5, spec: SPEC.dexos },
+          { engine: '2.4L L4 GAS FI', from: 2010, to: 2017, grade: '5W-30', capacityL: 4.7, spec: SPEC.dexos },
+        ],
+      },
       {
+        name: 'Traverse',
+        applications: [
+          { engine: '3.6L V6 GAS FI', from: 2009, to: 2023, grade: '5W-30', capacityL: 5.7, spec: SPEC.dexos },
+          { engine: '2.5L L4 (C) Turbocharged GAS FI', from: 2024, to: 2026, grade: '0W-20', capacityL: 5, spec: SPEC.dexos },
+        ],
+      },
+      {
+        name: 'Tahoe',
+        applications: [
+          { engine: '5.3L V8 GAS FI', from: 2015, to: 2026, grade: '0W-20', capacityL: 7.6, spec: SPEC.dexos },
+          { engine: '6.2L V8 GAS FI', from: 2015, to: 2026, grade: '0W-20', capacityL: 7.6, spec: SPEC.dexos },
+        ],
+      },
+      {
+        name: 'Suburban',
+        applications: [
+          { engine: '5.3L V8 GAS FI', from: 2015, to: 2026, grade: '0W-20', capacityL: 7.6, spec: SPEC.dexos },
+        ],
+      },
+      {
+        name: 'Colorado',
+        applications: [
+          { engine: '3.6L V6 GAS FI', from: 2015, to: 2022, grade: '5W-30', capacityL: 5.7, spec: SPEC.dexos },
+          { engine: '2.7L L4 (C) Turbocharged GAS FI', from: 2023, to: 2026, grade: '5W-30', capacityL: 5.7, spec: SPEC.dexos },
+        ],
+      },
+      {
+        name: 'Malibu',
+        applications: [
+          { engine: '1.5L L4 (C) Turbocharged GAS FI', from: 2016, to: 2025, grade: '0W-20', capacityL: 4, spec: SPEC.dexos },
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2016, to: 2023, grade: '5W-30', capacityL: 5, spec: SPEC.dexos },
+        ],
+      },
+{
         name: 'Blazer',
         applications: [
           { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2019, to: 2026, grade: '0W-20', capacityL: 5.2, spec: SPEC.dexos },
@@ -304,7 +346,41 @@ export const VEHICLES: VehicleMake[] = [
   {
     name: 'Ford',
     models: [
+            {
+        name: 'Bronco',
+        applications: [
+          { engine: '2.3L L4 (C) Turbocharged GAS FI', from: 2021, to: 2026, grade: '5W-30', capacityL: 5.7, spec: SPEC.ford961 },
+          { engine: '2.7L V6 (C) Turbocharged GAS FI', from: 2021, to: 2026, grade: '5W-30', capacityL: 6.6, spec: SPEC.ford961 },
+        ],
+      },
       {
+        name: 'Ranger',
+        applications: [
+          { engine: '2.3L L4 (C) Turbocharged GAS FI', from: 2019, to: 2026, grade: '5W-30', capacityL: 5.9, spec: SPEC.ford961 },
+          { engine: '2.7L V6 (C) Turbocharged GAS FI', from: 2024, to: 2026, grade: '5W-30', capacityL: 6.6, spec: SPEC.ford961 },
+        ],
+      },
+      {
+        name: 'Mustang',
+        applications: [
+          { engine: '2.3L L4 (C) Turbocharged GAS FI', from: 2015, to: 2026, grade: '5W-30', capacityL: 5.4, spec: SPEC.ford961 },
+          { engine: '5.0L V8 GAS FI', from: 2011, to: 2026, grade: '5W-20', capacityL: 9.5, spec: SPEC.ford947 },
+        ],
+      },
+      {
+        name: 'Edge',
+        applications: [
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2012, to: 2024, grade: '5W-30', capacityL: 5.4, spec: SPEC.ford961 },
+          { engine: '2.7L V6 (C) Turbocharged GAS FI', from: 2015, to: 2024, grade: '5W-30', capacityL: 5.7, spec: SPEC.ford961 },
+        ],
+      },
+      {
+        name: 'Expedition',
+        applications: [
+          { engine: '3.5L V6 (C) Turbocharged GAS FI', from: 2015, to: 2026, grade: '5W-30', capacityL: 5.7, spec: SPEC.ford961 },
+        ],
+      },
+{
         name: 'Bronco Sport',
         applications: [
           { engine: '1.5L L3 (C) Turbocharged GAS FI', from: 2021, to: 2026, grade: '5W-20', capacityL: 4.3, spec: SPEC.ford947 },
@@ -374,7 +450,26 @@ export const VEHICLES: VehicleMake[] = [
   {
     name: 'Honda',
     models: [
+            {
+        name: 'HR-V',
+        applications: [
+          { engine: '1.8L L4 GAS FI', from: 2016, to: 2022, grade: '0W-20', capacityL: 3.7, spec: SPEC.gf6a },
+          { engine: '2.0L L4 GAS FI', from: 2023, to: 2026, grade: '0W-20', capacityL: 4.2, spec: SPEC.gf6a },
+        ],
+      },
       {
+        name: 'Ridgeline',
+        applications: [
+          { engine: '3.5L V6 GAS FI', from: 2017, to: 2026, grade: '0W-20', capacityL: 5.4, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'Passport',
+        applications: [
+          { engine: '3.5L V6 GAS FI', from: 2019, to: 2026, grade: '0W-20', capacityL: 5.4, spec: SPEC.gf6a },
+        ],
+      },
+{
         name: 'Accord',
         applications: [
           { engine: '1.5L L4 (C) Turbocharged GAS FI', from: 2018, to: 2026, grade: '0W-20', capacityL: 3.7, spec: SPEC.gf6a },
@@ -468,7 +563,28 @@ export const VEHICLES: VehicleMake[] = [
   {
     name: 'Jeep',
     models: [
+            {
+        name: 'Wrangler',
+        applications: [
+          { engine: '3.6L V6 GAS FI', from: 2012, to: 2026, grade: '0W-20', capacityL: 4.7, spec: SPEC.mopar },
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2018, to: 2026, grade: '5W-30', capacityL: 4.7, spec: SPEC.mopar },
+        ],
+      },
       {
+        name: 'Cherokee',
+        applications: [
+          { engine: '2.4L L4 GAS FI', from: 2014, to: 2022, grade: '0W-20', capacityL: 5.2, spec: SPEC.mopar },
+          { engine: '3.2L V6 GAS FI', from: 2014, to: 2023, grade: '5W-20', capacityL: 5.6, spec: SPEC.mopar },
+        ],
+      },
+      {
+        name: 'Compass',
+        applications: [
+          { engine: '2.4L L4 GAS FI', from: 2017, to: 2022, grade: '0W-20', capacityL: 5.2, spec: SPEC.mopar },
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2023, to: 2026, grade: '5W-30', capacityL: 4.7, spec: SPEC.mopar },
+        ],
+      },
+{
         name: 'Cherokee',
         applications: [
           { engine: '2.4L L4 GAS FI', from: 2014, to: 2023, grade: '0W-20', capacityL: 5.2, spec: SPEC.mopar },
@@ -646,7 +762,39 @@ export const VEHICLES: VehicleMake[] = [
   {
     name: 'Nissan',
     models: [
+            {
+        name: 'Pathfinder',
+        applications: [
+          { engine: '3.5L V6 GAS FI', from: 2013, to: 2026, grade: '0W-20', capacityL: 4.8, spec: SPEC.gf6a },
+        ],
+      },
       {
+        name: 'Frontier',
+        applications: [
+          { engine: '4.0L V6 GAS FI', from: 2005, to: 2019, grade: '5W-30', capacityL: 5.1, spec: SPEC.gf6a },
+          { engine: '3.8L V6 GAS FI', from: 2020, to: 2026, grade: '0W-20', capacityL: 5, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'Murano',
+        applications: [
+          { engine: '3.5L V6 GAS FI', from: 2015, to: 2024, grade: '0W-20', capacityL: 4.8, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'Sentra',
+        applications: [
+          { engine: '1.8L L4 GAS FI', from: 2013, to: 2019, grade: '0W-20', capacityL: 4, spec: SPEC.gf6a },
+          { engine: '2.0L L4 GAS FI', from: 2020, to: 2026, grade: '0W-20', capacityL: 4.2, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'Versa',
+        applications: [
+          { engine: '1.6L L4 GAS FI', from: 2012, to: 2026, grade: '0W-20', capacityL: 3.5, spec: SPEC.gf6a },
+        ],
+      },
+{
         name: 'Altima',
         applications: [
           { engine: '2.5L L4 GAS FI', from: 2019, to: 2026, grade: '0W-20', capacityL: 4.8, spec: SPEC.gf6a },
@@ -697,7 +845,35 @@ export const VEHICLES: VehicleMake[] = [
   {
     name: 'Subaru',
     models: [
+            {
+        name: 'Outback',
+        applications: [
+          { engine: '2.5L L4 GAS FI', from: 2013, to: 2026, grade: '0W-20', capacityL: 4.8, spec: SPEC.gf6a },
+          { engine: '3.6L H6 GAS FI', from: 2010, to: 2019, grade: '0W-20', capacityL: 6.5, spec: SPEC.gf6a },
+          { engine: '2.4L H4 (C) Turbocharged GAS FI', from: 2020, to: 2026, grade: '0W-20', capacityL: 4.5, spec: SPEC.gf6a },
+        ],
+      },
       {
+        name: 'Crosstrek',
+        applications: [
+          { engine: '2.0L L4 GAS FI', from: 2013, to: 2026, grade: '0W-20', capacityL: 4.4, spec: SPEC.gf6a },
+          { engine: '2.5L L4 GAS FI', from: 2021, to: 2026, grade: '0W-20', capacityL: 4.4, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'Ascent',
+        applications: [
+          { engine: '2.4L H4 (C) Turbocharged GAS FI', from: 2019, to: 2026, grade: '0W-20', capacityL: 4.5, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'Impreza',
+        applications: [
+          { engine: '2.0L L4 GAS FI', from: 2012, to: 2026, grade: '0W-20', capacityL: 4.4, spec: SPEC.gf6a },
+          { engine: '2.5L L4 GAS FI', from: 2024, to: 2026, grade: '0W-20', capacityL: 4.4, spec: SPEC.gf6a },
+        ],
+      },
+{
         name: 'Crosstrek',
         applications: [
           { engine: '2.0L H4 GAS FI', from: 2013, to: 2023, grade: '0W-20', capacityL: 4.8, spec: SPEC.gf6a },
@@ -723,7 +899,48 @@ export const VEHICLES: VehicleMake[] = [
   {
     name: 'Toyota',
     models: [
+            {
+        name: '4Runner',
+        applications: [
+          { engine: '4.0L V6 GAS FI', from: 2010, to: 2024, grade: '0W-20', capacityL: 6.2, spec: SPEC.gf6a },
+          { engine: '2.4L L4 (C) Turbocharged GAS FI', from: 2025, to: 2026, grade: '0W-20', capacityL: 5.3, spec: SPEC.gf6a },
+        ],
+      },
       {
+        name: 'Sienna',
+        applications: [
+          { engine: '3.5L V6 GAS FI', from: 2007, to: 2020, grade: '0W-20', capacityL: 5.5, spec: SPEC.gf6a },
+          { engine: '2.5L L4 HYBRID EV-GAS FI', from: 2021, to: 2026, grade: '0W-16', capacityL: 4.5, spec: SPEC.gf6b },
+        ],
+      },
+      {
+        name: 'Tundra',
+        applications: [
+          { engine: '5.7L V8 GAS FI', from: 2007, to: 2021, grade: '0W-20', capacityL: 7.5, spec: SPEC.gf6a },
+          { engine: '3.4L V6 (C) Turbocharged GAS FI', from: 2022, to: 2026, grade: '0W-20', capacityL: 7.3, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'Sequoia',
+        applications: [
+          { engine: '5.7L V8 GAS FI', from: 2008, to: 2022, grade: '0W-20', capacityL: 7.5, spec: SPEC.gf6a },
+          { engine: '3.4L V6 (C) Turbo HYBRID EV-GAS FI', from: 2023, to: 2026, grade: '0W-20', capacityL: 7.3, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'Prius',
+        applications: [
+          { engine: '1.8L L4 HYBRID EV-GAS FI', from: 2010, to: 2022, grade: '0W-20', capacityL: 4.2, spec: SPEC.gf6a },
+          { engine: '2.0L L4 HYBRID EV-GAS FI', from: 2023, to: 2026, grade: '0W-16', capacityL: 4.2, spec: SPEC.gf6b },
+        ],
+      },
+      {
+        name: 'Venza',
+        applications: [
+          { engine: '2.5L L4 HYBRID EV-GAS FI', from: 2021, to: 2025, grade: '0W-16', capacityL: 4.5, spec: SPEC.gf6b },
+        ],
+      },
+{
         name: 'Camry',
         applications: [
           { engine: '2.5L L4 GAS FI', from: 2018, to: 2024, grade: '0W-20', capacityL: 4.6, spec: SPEC.gf6a },
@@ -820,4 +1037,131 @@ export const VEHICLES: VehicleMake[] = [
       },
     ],
   },
+  {
+    name: 'Genesis',
+    models: [
+      {
+        name: 'G70',
+        applications: [
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2019, to: 2023, grade: '5W-30', capacityL: 5.7, spec: SPEC.gf6a },
+          { engine: '3.3L V6 (C) Turbocharged GAS FI', from: 2019, to: 2025, grade: '5W-30', capacityL: 6.9, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'GV70',
+        applications: [
+          { engine: '2.5L L4 (C) Turbocharged GAS FI', from: 2022, to: 2026, grade: '0W-30', capacityL: 6.2, spec: SPEC.gf6a },
+          { engine: '3.5L V6 (C) Turbocharged GAS FI', from: 2022, to: 2026, grade: '0W-30', capacityL: 7, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'GV80',
+        applications: [
+          { engine: '2.5L L4 (C) Turbocharged GAS FI', from: 2021, to: 2026, grade: '0W-30', capacityL: 6.2, spec: SPEC.gf6a },
+          { engine: '3.5L V6 (C) Turbocharged GAS FI', from: 2021, to: 2026, grade: '0W-30', capacityL: 7, spec: SPEC.gf6a },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Porsche',
+    models: [
+      {
+        name: 'Macan',
+        applications: [
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2017, to: 2024, grade: '0W-20', capacityL: 5.2, spec: SPEC.vw50800 },
+          { engine: '3.0L V6 (C) Turbocharged GAS FI', from: 2015, to: 2021, grade: '0W-20', capacityL: 7.5, spec: SPEC.vw50800 },
+        ],
+      },
+      {
+        name: 'Cayenne',
+        applications: [
+          { engine: '3.0L V6 (C) Turbocharged GAS FI', from: 2019, to: 2026, grade: '0W-20', capacityL: 7.5, spec: SPEC.vw50800 },
+          { engine: '4.0L V8 (C) Turbocharged GAS FI', from: 2019, to: 2026, grade: '5W-40', capacityL: 9.5, spec: SPEC.vw50400 },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Land Rover',
+    models: [
+      {
+        name: 'Range Rover Sport',
+        applications: [
+          { engine: '3.0L V6 (C) Supercharged GAS FI', from: 2014, to: 2020, grade: '0W-20', capacityL: 8, spec: SPEC.gf6a },
+          { engine: '3.0L L6 (C) Turbocharged MHEV GAS FI', from: 2020, to: 2026, grade: '0W-20', capacityL: 8.8, spec: SPEC.gf6a },
+        ],
+      },
+      {
+        name: 'Defender 110',
+        applications: [
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2020, to: 2026, grade: '0W-20', capacityL: 7, spec: SPEC.gf6a },
+          { engine: '3.0L L6 (C) Turbocharged MHEV GAS FI', from: 2020, to: 2026, grade: '0W-20', capacityL: 8.8, spec: SPEC.gf6a },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Jaguar',
+    models: [
+      {
+        name: 'F-PACE',
+        applications: [
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2017, to: 2025, grade: '0W-20', capacityL: 7, spec: SPEC.gf6a },
+          { engine: '3.0L V6 (C) Supercharged GAS FI', from: 2017, to: 2020, grade: '0W-20', capacityL: 7.2, spec: SPEC.gf6a },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Mini',
+    models: [
+      {
+        name: 'Cooper',
+        applications: [
+          { engine: '1.5L L3 (C) Turbocharged GAS FI', from: 2014, to: 2026, grade: '0W-20', capacityL: 4.25, spec: SPEC.bmwll17 },
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2014, to: 2026, grade: '0W-20', capacityL: 5.25, spec: SPEC.bmwll17 },
+        ],
+      },
+      {
+        name: 'Countryman',
+        applications: [
+          { engine: '1.5L L3 (C) Turbocharged GAS FI', from: 2017, to: 2024, grade: '0W-20', capacityL: 4.25, spec: SPEC.bmwll17 },
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2017, to: 2025, grade: '0W-20', capacityL: 5.25, spec: SPEC.bmwll17 },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Fiat',
+    models: [
+      {
+        name: '500',
+        applications: [
+          { engine: '1.4L L4 GAS FI', from: 2012, to: 2019, grade: '5W-30', capacityL: 3.8, spec: SPEC.mopar },
+          { engine: '1.4L L4 (C) Turbocharged GAS FI', from: 2013, to: 2019, grade: '5W-40', capacityL: 3.8, spec: SPEC.mopar },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Alfa Romeo',
+    models: [
+      {
+        name: 'Stelvio',
+        applications: [
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2018, to: 2025, grade: '0W-30', capacityL: 5.2, spec: SPEC.mopar12633 },
+          { engine: '2.9L V6 (C) Turbocharged GAS FI', from: 2018, to: 2025, grade: '5W-40', capacityL: 7, spec: SPEC.mopar12633 },
+        ],
+      },
+      {
+        name: 'Giulia',
+        applications: [
+          { engine: '2.0L L4 (C) Turbocharged GAS FI', from: 2017, to: 2025, grade: '0W-30', capacityL: 5.2, spec: SPEC.mopar12633 },
+          { engine: '2.9L V6 (C) Turbocharged GAS FI', from: 2017, to: 2025, grade: '5W-40', capacityL: 7, spec: SPEC.mopar12633 },
+        ],
+      },
+    ],
+  },
+
 ]
