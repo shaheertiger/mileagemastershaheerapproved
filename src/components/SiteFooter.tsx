@@ -1,5 +1,5 @@
 import { footerColumns, legalStrip, site } from '../data/site'
-import { resolveHref, type PageId } from '../lib/routes'
+import { resolveHref, routes, type PageId } from '../lib/routes'
 import { Logo } from './Logo'
 import styles from './SiteFooter.module.css'
 
@@ -18,6 +18,9 @@ export function SiteFooter({ page, variant = 'full' }: SiteFooterProps) {
           <span>{`${site.copyright} · Mississauga, ON`}</span>
           <span>Made in Europe</span>
           <span>API SP licensed</span>
+          <a className={styles.legalLink} href={routes.sitemap}>
+            Sitemap
+          </a>
         </div>
       </footer>
     )
@@ -58,6 +61,9 @@ export function SiteFooter({ page, variant = 'full' }: SiteFooterProps) {
         {legalStrip.map((item) => (
           <span key={item}>{item}</span>
         ))}
+        <a className={styles.legalLink} href={routes.sitemap}>
+          Sitemap
+        </a>
         <span className={styles.note}>Mississauga, ON · Canada</span>
       </div>
     </footer>

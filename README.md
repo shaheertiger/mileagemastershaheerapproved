@@ -1,19 +1,20 @@
 # Mileage Master — marketing site & oil finder
 
-Two-page site for **Mileage Master** advanced full synthetic engine oil, distributed in Canada by
+Marketing site for **Mileage Master** advanced full synthetic engine oil, distributed in Canada by
 OEM Fleets (Mississauga, ON):
 
 | Page | Route | What it does |
 | --- | --- | --- |
 | Homepage | `/` | Hero, working oil finder, grade selector, Made in Europe, approvals, testimonials, dealer/quote form, order bar |
 | Oil finder | `/oil-finder/` | Year → Make → Model → Engine lookup returning grade, oil capacity, specification, drain interval and the matching Mileage Master products |
+| Sitemap | `/sitemap/` | Human-readable index of every page and section, linked from the footer |
 
 Built from the design handoff in [`docs/design-handoff/`](docs/design-handoff/), which stays in the
 repo as the reference for colours, type and copy.
 
 ## Stack
 
-Vite + React + TypeScript, built as a two-entry static site. No router and no server: each page is a
+Vite + React + TypeScript, built as a multi-entry static site. No router and no server: each page is a
 real HTML file, so the build drops onto any static host with no rewrite rules. Styling is CSS
 Modules over the design tokens in `src/styles/tokens.css`.
 
@@ -34,14 +35,16 @@ npm run fonts      # re-download the self-hosted webfonts
 ```
 index.html                  homepage entry (meta, preloads, structured data)
 oil-finder/index.html       oil finder entry
+sitemap/index.html          sitemap page entry
 assets-source/              full-resolution originals — never served
 public/
   img/                      generated WebP the site actually ships
   fonts/                    self-hosted woff2
-  favicon.svg  robots.txt  sitemap.xml  _headers
+  favicon.svg  _headers
 src/
   data/
-    site.ts                 phone, email, address, nav and footer links
+    pages.ts                every page: build entries, sitemap.xml and robots.txt
+    site.ts                 phone, email, address, nav, footer and sitemap links
     grades.ts               the seven viscosity grades and their licences
     products.ts             the three product lines, SKUs, packs and images
     images.ts               responsive image sets (src + srcset)
@@ -55,6 +58,7 @@ src/
   components/               chrome shared by both pages
   pages/home/               homepage and its sections
   pages/finder/             oil finder and its sections
+  pages/sitemap/            human-readable sitemap
   styles/tokens.css         every colour, font and spacing value in the design
   styles/fonts.css          generated @font-face rules — do not edit by hand
 docs/design-handoff/        the original design brief and prototypes
@@ -64,6 +68,9 @@ scripts/                    data validator, image pipeline, font fetcher
 ### Common edits
 
 - **Phone, email, hours, address** — `src/data/site.ts`.
+- **A new page** — add it to `src/data/pages.ts` with its HTML entry. The build entry, `sitemap.xml`
+  and `robots.txt` follow automatically; add it to `sitemapGroups` in `src/data/site.ts` to list it on
+  the sitemap page.
 - **Colours, type, spacing** — `src/styles/tokens.css`. Nothing hard-codes a hex value.
 - **A grade's copy or licences** — `src/data/grades.ts`.
 - **Product lines, pack sizes, SKUs** — `src/data/products.ts`.
@@ -134,9 +141,14 @@ Serving from a sub-path (GitHub Pages project sites) needs the base at build tim
 VITE_BASE=/mileagemastershaheerapproved/ npm run build
 ```
 
+### Sitemap and robots.txt
+
+`sitemap.xml` and `robots.txt` are generated at build time from `src/data/pages.ts`, with each URL's
+`lastmod` set to the build date. They only exist in `dist/`, not under `npm run dev`.
+
 **The canonical URLs assume `https://mileagemaster.ca`.** If the site lands on a different domain,
-update the `canonical` and `og:url` tags in both HTML files plus `public/robots.txt` and
-`public/sitemap.xml` — search engines will otherwise be pointed at the wrong host.
+build with `SITE_URL=https://example.com npm run build` and update the `canonical` and `og:url` tags
+in the three HTML entry files — search engines will otherwise be pointed at the wrong host.
 
 ## Before this goes live
 
@@ -170,7 +182,7 @@ Deliberate departures from the design prototypes, all of them things the handoff
 - The homepage finder selects are **live**, not decorative — they run against the same database as
   the catalogue, and "see full results" carries the selection over in the query string.
 - The selected grade in the grade selector is **marked in gold**, as the handoff recommended.
-- The header nav **collapses to a menu button below 860px** instead of wrapping.
+- The header nav **collapses to a menu button below 960px** instead of wrapping, and stays on a single row above it.
 - The catalogue finder **opens on the form** and shows results once a search runs or when the URL
   carries a vehicle; the prototype shipped with results always visible for review.
 - The "over 120,000 kilometres" toggle **defaults to off**. The prototype defaulted it on, which

@@ -52,6 +52,15 @@
   color: var(--mm-text-muted-2);
 }
 
+.legalLink {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.legalLink:hover {
+  color: var(--mm-red);
+}
+
 .note {
   margin-left: auto;
 }

@@ -23,7 +23,9 @@
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 26px;
+  /* Tightens between the collapse breakpoint and a full-width desktop, so the
+     logo, nav and CTA always share one row. */
+  gap: 4px clamp(14px, 2.6vw - 10px, 26px);
   margin-left: auto;
   font: 600 13px/1 var(--mm-font-ui);
   letter-spacing: 0.08em;
@@ -50,7 +52,7 @@
   flex: 0 0 auto;
 }
 
-/* Toggle is desktop-hidden; the nav wraps normally above the breakpoint. */
+/* Toggle is desktop-hidden; the nav sits inline above the breakpoint. */
 .toggle {
   display: none;
   margin-left: auto;
@@ -69,7 +71,25 @@
   border-color: var(--mm-white);
 }
 
-@media (max-width: 860px) {
+@media (min-width: 961px) {
+  .inner {
+    flex-wrap: nowrap;
+  }
+
+  .nav {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1100px) {
+  .nav {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 960px) {
   .toggle {
     display: inline-flex;
   }
