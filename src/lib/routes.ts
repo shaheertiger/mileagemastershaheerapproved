@@ -1,18 +1,20 @@
 /**
  * Page routing.
  *
- * The site is two static pages, so links are plain URLs built from Vite's
- * `BASE_URL`. Deploying under a sub-path only needs `VITE_BASE` at build time.
+ * The site is a handful of static pages, so links are plain URLs built from
+ * Vite's `BASE_URL`. Deploying under a sub-path only needs `VITE_BASE` at build
+ * time.
  */
 
-export type PageId = 'home' | 'finder'
+import { PAGES, type PageId } from '../data/pages'
+
+export type { PageId }
 
 const base = import.meta.env.BASE_URL
 
-export const routes = {
-  home: base,
-  finder: `${base}oil-finder/`,
-} as const
+export const routes = Object.fromEntries(
+  PAGES.map((page) => [page.id, `${base}${page.path}`]),
+) as Record<PageId, string>
 
 export interface SiteLink {
   label: string
@@ -24,13 +26,13 @@ export interface SiteLink {
  * Resolves a nav or footer link for the page currently being rendered.
  *
  * In-page anchors stay as anchors on their own page and become absolute links
- * back to the homepage anywhere else.
+ * back to their page anywhere else.
  */
 export function resolveHref(currentPage: PageId, link: Pick<SiteLink, 'href' | 'page'>): string {
   if (link.href.startsWith('#')) {
-    return link.page === currentPage ? link.href : `${routes.home}${link.href}`
+    return link.page === currentPage ? link.href : `${routes[link.page]}${link.href}`
   }
-  return link.page === 'finder' ? routes.finder : routes.home
+  return routes[link.page]
 }
 
 /** Link to the oil finder, optionally pre-filled with a vehicle selection. */

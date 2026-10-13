@@ -1,0 +1,72 @@
+.section {
+  padding-top: var(--mm-section-pad);
+  padding-bottom: var(--mm-section-pad);
+}
+
+.title {
+  font-family: var(--mm-font-display);
+  font-weight: 400;
+  font-size: clamp(38px, 5.6vw, 76px);
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.lead {
+  margin: 0 0 40px;
+  max-width: 620px;
+  font: 400 18px/1.55 var(--mm-font-ui);
+  color: var(--mm-text-body);
+  text-wrap: pretty;
+}
+
+.lead a {
+  text-decoration: underline;
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 24px;
+}
+
+.group {
+  border-top: 4px solid var(--mm-ink);
+  padding-top: 18px;
+}
+
+.heading {
+  font: 700 12px/1 var(--mm-font-ui);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.links {
+  display: grid;
+  gap: 1px;
+  background: var(--mm-rule-12);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links li {
+  background: var(--mm-white);
+}
+
+.links a,
+.links span {
+  display: block;
+  padding: 12px 0;
+  font: 500 15px/1.4 var(--mm-font-ui);
+  color: var(--mm-ink);
+}
+
+.links span {
+  color: var(--mm-text-copy);
+}
+
+.links a:hover {
+  color: var(--mm-red);
+}

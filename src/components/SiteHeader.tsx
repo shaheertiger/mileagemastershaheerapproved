@@ -11,7 +11,7 @@ interface SiteHeaderProps {
 }
 
 /**
- * Sticky site header. Above 860px the nav sits inline and wraps; below it
+ * Sticky site header. Above 960px the nav sits inline on one row; below it
  * collapses behind a menu button, which the handoff flags as a real-build
  * requirement.
  */
@@ -21,7 +21,7 @@ export function SiteHeader({ page }: SiteHeaderProps) {
   // Reset the menu when the viewport grows back past the breakpoint, so the
   // desktop nav is never left in a collapsed state.
   useEffect(() => {
-    const query = window.matchMedia('(min-width: 861px)')
+    const query = window.matchMedia('(min-width: 961px)')
     const onChange = () => {
       if (query.matches) setOpen(false)
     }

@@ -48,3 +48,36 @@ export const footerColumns = [
 ]
 
 export const legalStrip = [site.copyright, 'Made in Europe', 'API SP licensed']
+
+/** Groups on the human-readable sitemap page, in reading order. */
+export const sitemapGroups = [
+  {
+    heading: 'Homepage',
+    links: [
+      { label: 'Home', href: '/', page: 'home' as const },
+      { label: 'Find the right oil', href: '#finder', page: 'home' as const },
+      { label: 'Available grades, 0W-8 to 5W-40', href: '#grades', page: 'home' as const },
+      { label: 'Made in Europe', href: '#europe', page: 'home' as const },
+      { label: 'Approvals & specifications', href: '#specs', page: 'home' as const },
+      { label: 'Become a dealer', href: '#dealers', page: 'home' as const },
+    ],
+  },
+  {
+    heading: 'Oil finder',
+    links: [
+      { label: 'Find the right motor oil', href: '/oil-finder/', page: 'finder' as const },
+      { label: 'Search by year, make, model and engine', href: '#finder', page: 'finder' as const },
+      { label: 'Case pricing', href: '#pricing', page: 'finder' as const },
+      { label: 'Vehicle not listed?', href: '#help', page: 'finder' as const },
+    ],
+  },
+  {
+    heading: 'For shops',
+    links: [
+      { label: 'Request wholesale pricing', href: '#quote', page: 'home' as const },
+      { label: 'Become a dealer', href: '#dealers', page: 'home' as const },
+      { label: 'Spec sheets', href: '#specs', page: 'home' as const },
+      { label: 'Warranty information', href: '#specs', page: 'home' as const },
+    ],
+  },
+]
