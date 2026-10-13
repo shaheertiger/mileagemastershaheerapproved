@@ -155,7 +155,7 @@ in the three HTML entry files — search engines will otherwise be pointed at th
 These are real gaps, not polish items:
 
 1. **The vehicle data is a curated reference set, not a licensed application database.** It covers
-   177 engine applications across 26 makes for model years 2005–2026 — enough to demo and to serve
+   298 engine applications across 36 makes for model years 2005–2026 — enough to demo and to serve
    the common jobs, but it is not authoritative and it does not cover every trim. Before customers
    are advised from it, replace `src/data/vehicles.ts` with a licensed feed (Mitchell, ALLDATA,
    MOTOR, or the blender's own application guide). Everything reads the data through
