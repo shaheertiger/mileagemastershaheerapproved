@@ -7,7 +7,7 @@ import styles from './QuoteBlock.module.css'
 interface QuoteBlockProps {
   /** Anchor for the surrounding section; the form card is always `#quote`. */
   sectionId: string
-  heading: string[]
+  heading: readonly string[]
   lead: string
   /** The catalogue runs a slightly tighter version of the same block. */
   compact?: boolean

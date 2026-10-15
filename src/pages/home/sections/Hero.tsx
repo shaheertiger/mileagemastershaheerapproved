@@ -1,6 +1,7 @@
 import { Button } from '../../../components/Button'
 import { Icon } from '../../../components/Icon'
 import { JUG_FRONT } from '../../../data/images'
+import { site } from '../../../data/site'
 import styles from './Hero.module.css'
 
 const TRUST = [
@@ -20,16 +21,17 @@ export function Hero() {
           </div>
 
           <h1 className={styles.title}>
-            Quality
+            {site.positioning.retail[0]}
             <br />
-            <span className={styles.titleAccent}>priced right</span>
+            <span className={styles.titleAccent}>{site.positioning.retail[1]}</span>
           </h1>
 
           <div className={styles.rule} />
 
           <p className={styles.lead}>
-            European-blended full synthetic oil in every grade your bays run through — 0W-8 to
-            5W-40. API SP licensed, warranty approved, and priced for shops that buy by the case.
+            European-blended full synthetic oil in every grade from 0W-8 to 5W-40 — API SP
+            licensed and warranty approved. For shops that buy by the case:{' '}
+            <em className={styles.garageLine}>{site.positioning.garage.join(' ')}</em>
           </p>
 
           <div className={styles.actions}>

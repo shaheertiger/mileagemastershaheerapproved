@@ -3,6 +3,7 @@ import { QuoteBlock } from '../../components/QuoteBlock'
 import { SiteFooter } from '../../components/SiteFooter'
 import { SiteHeader } from '../../components/SiteHeader'
 import { UtilityBar } from '../../components/UtilityBar'
+import { site } from '../../data/site'
 import { QuotePrefillProvider } from '../../lib/quote'
 import { Approvals } from './sections/Approvals'
 import { FinderStrip } from './sections/FinderStrip'
@@ -31,8 +32,8 @@ export function HomePage({ showTestimonials = true, showOrderBar = true }: HomeP
         {showTestimonials && <Testimonials />}
         <QuoteBlock
           sectionId="dealers"
-          heading={['Become a', 'Mileage Master dealer']}
-          lead="Territory pricing, pallet programs and counter display kits for shops, jobbers and installers across Ontario."
+          heading={site.positioning.garage}
+          lead="Become a Mileage Master dealer: territory pricing, pallet programs and counter display kits for shops, jobbers and installers across Ontario."
         />
         {showOrderBar && <ContactBar headline="Order today" />}
       </main>

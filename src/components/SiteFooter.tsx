@@ -31,6 +31,7 @@ export function SiteFooter({ page, variant = 'full' }: SiteFooterProps) {
       <div className={`mm-container ${styles.columns}`}>
         <div>
           <Logo size="md" />
+          <p className={styles.positioning}>{site.positioning.retail.join(' ')}</p>
           <p className={styles.address}>{site.address}</p>
         </div>
 
