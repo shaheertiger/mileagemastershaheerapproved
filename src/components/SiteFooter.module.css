@@ -11,8 +11,15 @@
   padding-bottom: 26px;
 }
 
-.address {
+.positioning {
   margin: 16px 0 0;
+  font: 700 14px/1.4 var(--mm-font-ui);
+  color: var(--mm-ink);
+  max-width: 260px;
+}
+
+.address {
+  margin: 10px 0 0;
   font: 400 14px/1.6 var(--mm-font-ui);
   color: var(--mm-text-copy-soft);
   max-width: 260px;

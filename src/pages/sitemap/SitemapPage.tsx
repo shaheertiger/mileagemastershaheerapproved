@@ -59,8 +59,8 @@ export function SitemapPage() {
 
         <QuoteBlock
           sectionId="pricing"
-          heading={['Priced by the case,', 'not by the litre']}
-          lead="Send the grade and your monthly volume. Quotes go out the same business day."
+          heading={site.positioning.garage}
+          lead="Priced by the case, not by the litre. Send the grade and your monthly volume — quotes go out the same business day."
           compact
         />
         <ContactBar headline="Order today" />

@@ -5,6 +5,11 @@ export const site = {
   legalName: 'Mileage Master Inc.',
   distributor: 'OEM Fleets',
   tagline: 'Advanced full synthetic engine oil',
+  /** Positioning statements: one for drivers, one for the shops that serve them. */
+  positioning: {
+    retail: ['Quality you can trust.', 'Value we can deliver.'],
+    garage: ['Your customer trusts you.', 'You can trust us.'],
+  },
   phone: '905.602.6897',
   phoneHref: 'tel:+19056026897',
   email: 'orders@oemfleets.ca',

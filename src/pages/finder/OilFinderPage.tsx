@@ -4,6 +4,7 @@ import { QuoteBlock } from '../../components/QuoteBlock'
 import { SiteFooter } from '../../components/SiteFooter'
 import { SiteHeader } from '../../components/SiteHeader'
 import { UtilityBar } from '../../components/UtilityBar'
+import { site } from '../../data/site'
 import { QuotePrefillProvider } from '../../lib/quote'
 import { routes } from '../../lib/routes'
 import { useFinderState } from '../../lib/useFinderState'
@@ -57,8 +58,8 @@ export function OilFinderPage({ showBudgetLine = true }: OilFinderPageProps) {
         )}
         <QuoteBlock
           sectionId="pricing"
-          heading={['Priced by the case,', 'not by the litre']}
-          lead="Send the grade and your monthly volume. Quotes go out the same business day."
+          heading={site.positioning.garage}
+          lead="Priced by the case, not by the litre. Send the grade and your monthly volume — quotes go out the same business day."
           compact
         />
         <ContactBar id="help" headline="Vehicle not listed?" />

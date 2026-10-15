@@ -68,6 +68,10 @@ scripts/                    data validator, image pipeline, font fetcher
 ### Common edits
 
 - **Phone, email, hours, address** — `src/data/site.ts`.
+- **Positioning statements** — `site.positioning` in `src/data/site.ts`. The retail line ("Quality you
+  can trust. Value we can deliver.") is the homepage headline and footer sign-off; the garage line
+  ("Your customer trusts you. You can trust us.") heads every wholesale-pricing block. The page
+  `<title>` and meta description in `index.html` repeat the retail line by hand.
 - **A new page** — add it to `src/data/pages.ts` with its HTML entry. The build entry, `sitemap.xml`
   and `robots.txt` follow automatically; add it to `sitemapGroups` in `src/data/site.ts` to list it on
   the sitemap page.
